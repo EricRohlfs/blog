@@ -1,5 +1,7 @@
+2022-01-06
+
 # Experiences rewriting AngularJs with ES6 Custom Elements
-For the past year I have been upgrading AngularJs apps and for some of them I have been replacing angularJs with with ES6 customElements.
+For the past year (2021) I have been upgrading AngularJs apps and for some of them I have been replacing angularJs with with ES6 customElements.
 The catch for one of the upgades was to try to do it without using any 3rd party components (except for CSS was ok.)  
 I have to pay a huge paperwork penalty when using 3rd party OSS.  
 
