@@ -10,6 +10,8 @@ I had a good time reverse engineering that behavior, mabye I'll write about that
 
 When I first started I tried to replace commonly used AngularJs features with corresponding features, but found out that in many cases they were not needed.
 
+(Code samples are stubbed in from memory, and are very incomplete. They should provide enough info that the gaps can be filled via internet searches.)
+
 ## ng-show and ng-hide (didn't need it)
 Take ng-show and ng-hide, they were widely used in just about every angularJs app ever written.  I created a simple relpacement for these called zz-show and zz-hide, 
 but found out that I did not need them.  Take a simple form for example where you first show a 'loading' spinner, then the form, then 'thank you' upon submit.  
@@ -39,7 +41,6 @@ const formTemplate = (user) => `<div> <input type="text" name="fname" value="${h
 const thankYouTemplate = () => '<div>Thank You</div>'
 
 ```
-
 
 
 ## Reactivity
