@@ -6,4 +6,5 @@ I have an older blogspot or blogger site. I never got it configured correctly an
 
 
 [customElements and AngularJs](customElements.md)
+
 [Bootstrap and CustomElements and ShadowDOM](bootstrapAndCustomElements.md)
