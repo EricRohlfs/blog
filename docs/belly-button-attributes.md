@@ -2,14 +2,15 @@
 
 I'll regret this name later, but it stuck in my head as a good enough mnemonic device to explain the concept, so sticking with it for now.  
 
-There are a few goals in the HTML and ES spec for managing external and internal state.  
+Note: There are a few goals in the HTML and ES spec for managing external and internal state using aria-attributes and other things, but for now I would like something simpler.
 
-Until them, I'm proposing what I call belly-button-attributes.  
-belly-button-attributes are reactive attributes and they are either in or out, but not both.
+I'm proposing what I call belly-button-attributes.
 
-For elements that are one way in, but not reactive, avoid using the 'in' or 'out' prefix.
+belly-button-attributes are reactive attributes. They are either in or out, but not both.
 
-The general presumption is the component is using attributeChangedCallback to react to state changes.
+For elements that are one way in or out, but not reactive, avoid using the 'in' or 'out' prefix. 
+
+The general presumption is the component is using attributeChangedCallback to react to changes.
 
 ```
   <my-component in-some-var="foo" out-some-var="bar"></my-component>
