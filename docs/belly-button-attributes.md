@@ -8,7 +8,7 @@ I'm proposing what I call belly-button-attributes.
 
 Belly button attributes are reactive attributes. They are either in or out, but not both.
 
-The convention to prefix with in/out or suffix with in/out is up to you.
+The convention to prefix or suffix with in/out is team preference.
 
 For elements that are one way in or out, but not reactive, avoid using the 'in' or 'out' prefix. 
 
