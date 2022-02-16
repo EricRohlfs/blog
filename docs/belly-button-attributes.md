@@ -29,6 +29,8 @@ a single attribute is used for external use and or for internal use. Sometimes c
 ```
 
 Typed from memory, so YMMV if you copy and paste.
+Also, I highly recommend using getters and setters for attributes vs using this.getAttribute(...) all over the place.
+
 ```
 export MyComponent extends HTMLElement{
   static get observedAttributes() { return ['in-state', 'out-state']; }
@@ -62,8 +64,10 @@ export MyComponent extends HTMLElement{
   
   
   doSomethnig(){ //like get data
-    ....
-    this.setAttribute('out-state','error')
+    if .... this.setAttribute('out-state','error')
+    .... //other work
+    this.setAttribute('out-state', 'ready')
+    
   }
   
   template(){
