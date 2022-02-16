@@ -8,7 +8,7 @@ I'm proposing what I call belly-button-attributes.
 
 Belly button attributes are reactive attributes. They are either in or out, but not both.
 
-The convention to prefix or suffix with in/out is team preference.
+The convention to prefix or suffix with in/out is team preference, but using the word prefix in the rest of the document.
 
 For elements that are one way in or out, but not reactive, avoid using the 'in' or 'out' prefix. 
 
@@ -20,7 +20,7 @@ The general presumption is the component is using attributeChangedCallback to re
 
 Attributes prefixed with 'in' are for parent or other external components to set.
 
-Attributes prefixedf with 'out' are set by the component for either internal use or external notification.
+Attributes prefixed with 'out' are set by the component for either internal use or external notification.
 
 There is no real technology under the hood that helps with reactivity by using this convention, but it should help in development and prevent some complexitiy issues than can be cause when 
 a single attribute is used for external use and or for internal use. Sometimes context and who is setting the value matters.
