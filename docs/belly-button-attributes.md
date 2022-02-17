@@ -26,7 +26,11 @@ And you want to expose the selected index as an attribute for easy observability
 And you want to also allow the initial value to be set when the custom element is first created by a parent element.
 ```
    const user = { salutation:'Mr.', fname:'John', lname:'doe'}
-   this.innerHTML = `<select is="salutations-dropdown" selected-value-in="${user.salutation}"></select>
+   this.innerHTML = safeHTML`<form> 
+                          <select is="salutations-dropdown" selected-value-in="${user.salutation}" name="salutation"></select>
+                          <input type="text" value="${user.fname}" name="fname"/>
+                          <input type="text" value="${user.lname} name="lname"/>
+                     </form>`
 ```
 
 The same component rendered on the DOM
