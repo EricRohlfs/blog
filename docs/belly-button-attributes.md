@@ -20,6 +20,20 @@ The general presumption is the component is using attributeChangedCallback to re
   <my-component in-some-var="foo" out-some-var="bar"></my-component>
 ```
 
+or
+Lets say you have a custom element that creates a drop down list, and encapsulates it's own logic including the fetch to get the data to populate the drop down.
+And you want to expose the selected index as an attribute for easy observability (instead of publishing an event, which would work too without using attributes.)
+And you want to also allow the initial value to be set when the custom element is first created by a parent element.
+```
+   const user = { salutation:'Mr.', fname:'John', lname:'doe'}
+   this.innerHTML = `<select is="salutations-dropdown" selected-value-in="${user.salutation}"></select>
+```
+
+The same component rendered on the DOM
+```
+  <select is="salutations-dropdown" selected-value-in="Mr." selected-value-out="Mr.">....Options <select>
+```
+
 Attributes prefixed with 'in' are for parent or other external components to set.
 
 Attributes prefixed with 'out' are set by the component for either internal use or external notification.
