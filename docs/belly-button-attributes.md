@@ -1,4 +1,4 @@
-# Belly Button Attributes a convention for component reactivity
+# Belly Button Attributes a convention for component reactivity in web components
 
 I'll regret this name later, but it stuck in my head as a good enough mnemonic device to explain the concept, so sticking with it for now.  
 
@@ -24,6 +24,10 @@ Attributes prefixed with 'out' are set by the component for either internal use 
 
 There is no real technology under the hood that helps with reactivity by using this convention, but it should help in development and prevent some complexitiy issues than can be cause when 
 a single attribute is used for external use and or for internal use. Sometimes context and who is setting the value matters.
+
+One use case is when the component has a default or initial state or value (that is reactive) but in some cases, we want an outside component to set the initial value.  
+
+A good example is a drop-down list where internally the default is an empty string, but our form has the real initial value, it could use this pattern to set the in-selected-index and the component can use the out-selected-index to report the real value, this prevents a conflict when a single attribute tries to manage both internal and external in a reactive example that may have complex timing issues.
 
 
 ```
