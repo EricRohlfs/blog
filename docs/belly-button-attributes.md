@@ -1,10 +1,10 @@
 # Belly Button Attributes a convention for component reactivity in web components
 
-I'll regret this name later, but it stuck in my head as a good enough mnemonic device to explain the concept, so sticking with it for now.  
+*I'll regret this name later, but it stuck in my head as a good enough mnemonic device to explain the concept, so sticking with it for now.*  
 
-Also, this is not about buttons, but html attributes.
+*Also, this is not about buttons, but html attributes.*
 
-Note: There are a few goals in the HTML and ES spec for managing external and internal state using aria-attributes and other things, but for now I would like something simpler.
+*Note: There are a few goals in the HTML and ES spec for managing external and internal state using aria-attributes and other things, but for now I would like something simpler.*
 
 I'm proposing what I call belly-button-attributes.
 
