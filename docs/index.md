@@ -13,4 +13,4 @@ I have an older blogspot or blogger site. I never got it configured correctly an
 
 [Aha moment building sortable table](SortableTableCustomElement.md)
 
-[createElement with is is annoying](CreateElementIsAnnoying.md)
+[createElement with is ... is annoying](CreateElementIsAnnoying.md)
