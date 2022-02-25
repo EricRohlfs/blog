@@ -39,6 +39,7 @@ Imports for my html files
           }
         }
     </script>
+    <!-- these imports will always point to the browser versions of the js.
     <script type="module">
         import { defineCustomElements as defineMovieTable } from '../../dist/table-uswds/index.js'
         defineMovieTable()
