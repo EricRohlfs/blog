@@ -12,3 +12,5 @@ I have an older blogspot or blogger site. I never got it configured correctly an
 [Belly button attribute convention for reactive web components](belly-button-attributes.md)
 
 [Aha moment building sortable table](SortableTableCustomElement.md)
+
+[createElement with is is annoying](CreateElementIsAnnoying.md)
