@@ -2,8 +2,8 @@
 
 tldr; use importmaps
 
-But why unbundled? Few reasons, my personal reason is I don't like waiting. Second, in some industries software supply chain management is a real thing, 
-and frankly for smaller projects the paperwork involved can outweigh the benefits. 
+But why unbundled? Few reasons, my personal reason is I don't like waiting. Second, in some industries software supply chain management is a real thing. 
+Frankly for smaller projects the paperwork involved can outweigh the benefits. 
 
 The issue is the Typescript files will be in one folder ('src'). The output JavaScript will be in another ('dist'). 
 
