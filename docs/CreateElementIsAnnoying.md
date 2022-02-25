@@ -14,5 +14,5 @@ Luckily I didn't loose too much time tracking this one down.
   hw.setAttribute('is','hello-world')
   document.body.appendChild(hw)
   
-  // now other components can query the is attribute
+  // now other components can querySelect on the 'is' attribute
 ```
