@@ -8,7 +8,7 @@ Frankly for smaller projects the paperwork involved can outweigh the benefits.
 The issue is the Typescript files will be in one folder ('src'). The output JavaScript will be in another ('dist'). 
 
 You could have all imports point to the 'dist' folder, that kinda works, but the Typescript types are removed from the JavaScript in the dist folder, so we 
-loose half the benefit of using Typescript. Using importmaps gives the best of both worlds. Typescript can follow the truncated or shorthand import staements, 
+loose half the benefit of using Typescript. Using importmaps gives the best of both worlds. Typescript can follow the truncated or shorthand import statements, 
 then use importmap to map the shorthand to the browser version of the JS files to import.
 
 If you don't like this approach, you can always bundle with rollup, but then we are no longer working unbundled. 
