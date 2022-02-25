@@ -1,6 +1,6 @@
 # Building a sortable, pagable table using custom elements
 
-tldr: use multiple components vs. one big monolithic library. While more verbose lines of code, the separation of concerns significantly improves the reasoning of the code.
+tldr: use multiple components vs. one big monolithic library. While more verbose (more lines of code), the separation of concerns significantly improves the reasoning of the code.
 
 The big takeaway for me was to not build one big component, but to create specialized custom elements.
 
