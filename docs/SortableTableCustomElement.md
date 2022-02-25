@@ -6,8 +6,10 @@ The big takeaway for me was to not build one big component, but to create specia
 
 
 The TableSortbleElement is fairly dumb, it mainly knows how to sort and create elements from a json object
-- create header elements from a json object
-- create 
+- create header elements from a json cfg object
+- create table cells from a json cfg object
+- sort the backing json object and re-paint the page
+- work with the cusomElement TableSortableHeaderElement to manage the ascending, descending, none UI as described by https://designsystem.digital.gov/components/table/
 
 ### Components Created
 
