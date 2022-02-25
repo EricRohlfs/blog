@@ -4,6 +4,8 @@ tldr: Use multiple components vs. one big monolithic component. Multiple compone
 
 The big takeaway for me was to not build one big component, but to create specialized custom elements.
 
+![sortable table using USWDS css](./images/tableWithSorting.png)
+
 
 The TableSortbleElement is fairly dumb, it mainly knows how to sort and create elements from a json object
 - create header elements from a json cfg object
