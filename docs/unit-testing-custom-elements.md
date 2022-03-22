@@ -17,6 +17,7 @@ Install the karma-cli globally.  The karma cli is different than just karma
 - jasmine
 - I want source maps to work with my ts files.
 - visual studio code
+- I have separate configs for production code and karma tests.
 
 In Visual Studio Code, I have three terminal tabs open. 
 - terminal for git commands
@@ -24,6 +25,7 @@ In Visual Studio Code, I have three terminal tabs open.
 - terminal for karma to watch dist/**/*.js files (but in my case really only needs to watch the ./dist/test/test_context.spec.js
 
 
+## karma.config.cjs
 karma.config.cjs - for sourcemaps to work with ts files. The rest of my config is default from karma init
 
 ```
