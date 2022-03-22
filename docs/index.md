@@ -16,3 +16,5 @@ I have an older blogspot or blogger site. I never got it configured correctly an
 [createElement with is ... is annoying](CreateElementIsAnnoying.md)
 
 [Unbundled with Typescript](unbundledWithTypescript.md)
+
+[Adventures in Unit Testing Custom Elements](unit-testing-custom-elements.md)
