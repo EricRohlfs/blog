@@ -51,3 +51,46 @@ karma.config.cjs - for sourcemaps to work with ts files. The rest of my config i
 ```
 
 
+## Rollup.config
+Notice I have two entries.  
+
+- One is for 'production' or running in the browser. 
+- The second one is for karma - it has the code already imported into it.
+
+rollup.config.js 
+```
+import typescript from '@rollup/plugin-typescript'
+export default [
+  // this section is NOT used by Karma at all and is used by the browser when deployed for users
+  {
+    input: './src/bundlingExample/index.ts',
+    output: {
+      file: './dist/bundlingExample/index.bundled.js',
+      format: 'es',
+      sourcemap: true
+    },
+    plugins: [
+      typescript({
+        tsconfig: './tsconfig.rollup.json'
+      })
+    ]
+  },
+  // used only by Karma and has the tests and the code all the bundled up into one file.
+  // It would be nice to split code from tests, but would need to work out imports, with either content negotation, importmaps, or some other plug-in. 
+  {
+    input: './src/test/test_context.spec.ts',
+    output: {
+      file: './dist/test/test_context.spec.js',
+      format: 'es',
+      sourcemap: true
+    },
+    plugins: [
+      typescript({
+        tsconfig: './tsconfig.rollup.json'
+      })
+    ]
+  }
+]
+
+
+```
