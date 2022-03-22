@@ -35,7 +35,7 @@ karma.config.cjs - for sourcemaps to work with ts files. The rest of my config i
       { pattern: './dist/**/*.map', type: 'module', watched: false, served: true, included: false},
       
       // all my tests and code gets bundled up into this one file.  I would like to split out my tests from source code.
-      // The primary issue in splitting is imports. Imports do not have file extensions and most browsers like extensions.
+      // The primary issue in splitting is imports. Import statements in code do not have file extensions, and most static file servers like extensions (.js).
       // It would be nice to setup content negotation on the web server to recognize the mime-type and map that to the .js file.
       // my wish for a content negotation plug-in  :
       //  request uri: ./app/index
