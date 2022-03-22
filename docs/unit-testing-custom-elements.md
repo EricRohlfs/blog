@@ -1,6 +1,17 @@
 # Adventures in Unit Testing Custom Elements
 2022-03-22
 
+Primary choices are 
+- jest
+- karma
+- https://open-wc.org/docs/testing/testing-package/
+
+I did not try open-wc/testing.
+
+I have done some puppeteer work, and jest-puppeteer is very nice. But that is a different kind of testing.
+
+
+
 ## Gotcha's
 
 JSODM does not fully support customElements at the time of this writing.  Some Jest users are using the electron runner instead of JSDOM in jest. 
@@ -9,6 +20,44 @@ I could not get the electron plug-in worknig in Jest and I noticed that it's no 
 I did get jest with jsdom working, and for some things it worked, but enough things did not work, so I moved on or back to Karma.
 
 Install the karma-cli globally.  The karma cli is different than just karma
+
+## My Package.json 
+Not all dependencies in this list are required for Karma, as you can see, I have jest and puppeteer in there.
+
+```
+"devDependencies": {
+ "@rollup/plugin-typescript": "^8.3.1",
+    "@types/expect-puppeteer": "^4.4.7",
+    "@types/jasmine": "^4.0.0",
+    "@types/jest": "^27.4.0",
+    "@types/jest-environment-puppeteer": "^5.0.0",
+    "@types/puppeteer": "^5.4.4",
+    "@typescript-eslint/eslint-plugin": "^5.10.2",
+    "@typescript-eslint/parser": "^5.10.2",
+    "cpr": "^3.0.1",
+    "eslint": "^8.8.0",
+    "eslint-plugin-jasmine": "^4.1.3",
+    "jasmine": "^3.10.0",
+    "jasmine-core": "^3.10.1",
+    "jest": "^27.5.1",
+    "jest-puppeteer": "^6.1.0",
+    "karma": "^6.3.9",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-jasmine": "^4.0.1",
+    "karma-jasmine-html-reporter": "^1.7.0",
+    "karma-sourcemap-loader": "^0.3.8",
+    "karma-spec-reporter": "^0.0.32",
+    "npm-run-all": "^4.1.5",
+    "puppeteer": "^13.1.3",
+    "rollup": "^2.60.2",
+    "sinon": "^11.1.2",
+    "static-server": "^2.2.1",
+    "terser": "^5.12.1",
+    "ts-jest": "^27.1.3",
+    "ts-sinon": "^2.0.2",
+    "typescript": "^4.5.4"
+
+```
 
 ## My Karma Setup
 
