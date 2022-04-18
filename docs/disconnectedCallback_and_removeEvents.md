@@ -48,7 +48,7 @@ https://stackoverflow.com/questions/54921027/remove-event-listener-that-has-been
     this.innerHTML = '<button>Close</button>
     this.closeButton = this.querySelector(':scope button')
     this.closeHandlerBound = this.closeHandler.bind(this) // the fix
-    this.closeButton.addEventListener('click', this.closeHandlerBound,{once:true})
+    this.closeButton.addEventListener('click', this.closeHandlerBound, {once:true})
   }
   
   disconnectedCallback(){
@@ -60,6 +60,10 @@ https://stackoverflow.com/questions/54921027/remove-event-listener-that-has-been
   }
 
 ```
+
+## Ensuring this strategy works
+
+Check to see if the event count is stays the same using the Memory tab in Chrome dev tools.
 
 ![image](https://user-images.githubusercontent.com/697757/163839013-bfdd8c26-e2ca-423f-b5eb-fe1740e9504b.png)
 
