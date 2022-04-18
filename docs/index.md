@@ -18,3 +18,5 @@ I have an older blogspot or blogger site. I never got it configured correctly an
 [Unbundled with Typescript](unbundledWithTypescript.md)
 
 [Adventures in Unit Testing Custom Elements](unit-testing-custom-elements.md)
+
+[disconnectedCallback and properly removing events](disconnectedCallback_and_removeEvents.md)
