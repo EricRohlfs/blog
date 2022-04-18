@@ -65,6 +65,12 @@ https://stackoverflow.com/questions/54921027/remove-event-listener-that-has-been
 
 Check to see if the event count is stays the same using the Memory tab in Chrome dev tools.
 
+Before: 20 events
+Events: 22 events
+After: 20 events
+
+Safe to say this solution works
+
 Before events are added
 
 ![image](https://user-images.githubusercontent.com/697757/163839013-bfdd8c26-e2ca-423f-b5eb-fe1740e9504b.png)
