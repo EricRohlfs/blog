@@ -22,3 +22,5 @@ I have an older blogspot or blogger site. I never got it configured correctly an
 [disconnectedCallback and properly removing events](disconnectedCallback_and_removeEvents.md)
 
 [Changing my mind on the is attribute](changing-my-mind-on-is)
+
+[Changing my mind on the template tag](template-tag-vs-template-literals)
