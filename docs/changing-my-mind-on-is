@@ -1,5 +1,7 @@
 # Changing my mind on the 'is' attribute for custom elements
 
+I am starting to favor the 'is' attribute over custom tag names lately.
+
 When I first started building web components, the app was built top down and custom tag names worked great and felt comfortable to me given my xml background.
 
 But when I started integrating components into legacy systems and wanted to have configurable custom element names, I'v found that the 'is=my-component' is cleaner.
