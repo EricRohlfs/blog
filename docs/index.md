@@ -20,3 +20,5 @@ I have an older blogspot or blogger site. I never got it configured correctly an
 [Adventures in Unit Testing Custom Elements](unit-testing-custom-elements.md)
 
 [disconnectedCallback and properly removing events](disconnectedCallback_and_removeEvents.md)
+
+[Changing my mind on the is attribute](changing-my-mind-on-is)
