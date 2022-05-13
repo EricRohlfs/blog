@@ -57,15 +57,17 @@ The counterparts to document.createElement are:
 - vue has 'h('div',{class:'btn'})'
 - react has createElement().
 
-I often use createElement for data driven components like tables or components that assemble other components together.
-An example of a component that assembles other components could be when I make a shadowdom and non-shadowdom version of a component.
+I often use createElement for data driven components like tables or components that assemble other components together (like a shady and non-shady version of a component.)
 
-Technically I don't call document.createElement in my components anymore.  
-I have my own createElement method that does a few nice things like adding the 'is' attribute to the element after it is created.
-Automatically detects boolean attributes and constructs them properly for use with this.hasAttribute('foo').
-Does not overwrite any css that may have been added by the constructor 
+Technically` I don't call document.createElement in my components anymore.  
+I have my own createElement method that does a few nice things like:
+
+- adds the 'is' attribute to the element after it is created
+- automatically detects boolean attributes and constructs them properly for use with this.hasAttribute('foo')
+- does not overwrite any css classes that may have been added by the constructor
 
 ```
+// shadowdom
 export const MyComponentShady extends HTMLDivElement {
   constructor(){
     super()
@@ -76,6 +78,7 @@ export const MyComponentShady extends HTMLDivElement {
   }
 }
 
+// No shadowdom
 export const MyComponentNotShady extends HTMLDivElement {
   constructor(){
     super()
@@ -135,27 +138,32 @@ export const MyCustomElement extends HTMLDiv{
 
 ## Blended Strategies
 
-As you can see, my first example in this article was somewhat of a blended strategy. I did use createElement to add the phone number.
+*The first example in this article is somewhat of a blended strategy. I did use createElement() to add the phone number.*
 
-
-I recently I created a re-usable, configurable toaster.  Because it was configurable, it fell into the data-driven category, and using template literals alone did not make sense.  
+I recently I created a re-usable, configurable toaster.  Configurable means data-driven, and using template literals alone did not make sense.  
 
 The toaster followed a type of factory pattern.
 
+- standard - nothing special, just set a color and a message, if button-text then shows a button
+- success - color green, with a checkMark icon
+- error - color red, with a X icon
+
+
+Examples of calling the toaster
 ```
-toaster({type:standard, message:'hello'})
-// or 
-toaster({type:success})
-// or
-toaster({type:standard, color:'blue', textColor:'white', message:'Call your mom on mothers day', button-text:'ok'})
+  toaster({type:standard, color:'purple', message:'hello'})
+  // or 
+  toaster({type:success})
+  // or
+  toaster({type:standard, color:'blue', textColor:'white', message:'Call your mom on mothers day', button-text:'ok'})
 
 ```
 
 Had I used createElement for everything in this component, it would be very hard to read and reason about. So instead I used template literals where it made sense.
 
-Then I used either the subtractive or additive methods to remove elements that did not make sense for certian configurations.
+I did the subtractive and additive methods to drive the HTML for certain configurations.
 
-I mainly used additive for features that are not when the component is first added to the DOM. For example, if the same notification is added twice, I don't add the same message twice, instead I show a badge with a counter.
+I mainly used additive for features that are not needed when the component is first added to the DOM. For example, if the same notification is added twice, I don't add the same message twice, instead I show a badge with a counter.  The badge usses the additive method to add the html to the component.
 
 
 
