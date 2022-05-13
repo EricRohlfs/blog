@@ -26,3 +26,5 @@ I have an older blogspot or blogger site. I never got it configured correctly an
 [Changing my mind on the template tag](template-tag-vs-template-literals.md)
 
 [vue hijacking my template and a workaround](custom-elements-template-and-vue.md)
+
+[Blended Template Strategies in ES6+ native customElements](blended_template_strategies.md)
