@@ -155,7 +155,7 @@ Had I used createElement for everything in this component, it would be very hard
 
 Then I used either the subtractive or additive methods to remove elements that did not make sense for certian configurations.
 
-I mainly used the additive for features that were not when first added to the DOM. For example, if the same notification is added twice, a badge with a counter is added to the upper left corner, to indicate the message was added more than once, vs just putting the same toaster on the page again.
+I mainly used additive for features that are not when the component is first added to the DOM. For example, if the same notification is added twice, I don't add the same message twice, instead I show a badge with a counter.
 
 
 
