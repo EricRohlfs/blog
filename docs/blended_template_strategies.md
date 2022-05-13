@@ -1,6 +1,6 @@
 # Blended template building strategies in ES6+
 
-## Background you can skip 
+## Background Info (you can skip) 
 
 ES6+ is the term I use for all the new features in JavaScript to support native customElements without using any 3rd party libraries. This capability was introduced in in ECMAScript 6 (in 2015). But also includes all the new features released every year, hence the '+'. 
 
@@ -8,6 +8,8 @@ Now that Internet Explorer is obsolete, native custom elements are now feasible.
 
 I use ES6+ components because I pay a heavy tax for using 3rd party libraries: paperwork, continual updates and releases, breaking changes, etc.
 
+
+## Main Strategies
 
 My primary native ES6+ template strategies (so far) are: 
 
