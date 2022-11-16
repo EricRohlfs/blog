@@ -29,4 +29,4 @@
 - typescript with rollup or importmap
 - security XSS and XSRF
 - router - just mapping a url to a component and potentially passing some data via route changes
-- 
+- unit testing (Karma is recommended, but there is a trick when using typescript.)
