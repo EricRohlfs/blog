@@ -1,5 +1,8 @@
 # Custom Element Design Strategy
 
+The most heritical and important statement is __'update the largest amount HTML you can easily get away with'__ 
+
+
 - Learn the fundimentals
 - For templates and reactivity update the largest amount HTML you can easily get away with. Limiting factors are usually things like transitions or loops.
 - Start with getting the template on the page, then work on reactivity.
