@@ -13,7 +13,7 @@
 - secure template literals (via tagged template literals)
 - addEventListener
 - custom element that extends HTMLFormElement for input and managing input
-- formData especially - this.user = Object.fromEntries(new FormData(this).entries());
+- formData especially - ```this.user = Object.fromEntries(new FormData(this).entries());```
 - use boolean attributes
 - creating custom Events
 
