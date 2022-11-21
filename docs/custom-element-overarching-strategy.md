@@ -19,6 +19,7 @@ The most heritical and important statement is __'update the largest amount HTML 
 - formData especially - ```this.user = Object.fromEntries(new FormData(this).entries());```
 - use boolean attributes
 - custom Events
+- mutationObserver
 
 ## Extras 
 - how to pass primitive data between components (usually attributes and optionally observedAttributes)
