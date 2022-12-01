@@ -5,6 +5,9 @@
  Or about data driven web vs. using the web for the web and trying to be semantic about it.
  )
 
+When starting with native web components, there is a temptation to try to mimic and re-build the framework that you know instead of using native web components for what they are.  One of the sticking points is when it comes to what most call reactivity.  Teams usually want to have a one size fits all.  
+
+
 We all want things to be easy and rational.  It sounds logical to have one way to do everything.  
 In web-components and web development at large we work in a few domains HTML, JavaScript, CSS.
 
