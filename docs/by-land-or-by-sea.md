@@ -2,7 +2,7 @@
 
 (This is a rough draft of some thoughts that need a better way to explain when building web components.
  This might be a dig on trying to take proxy objects too far and ignoring the other tools at your disposal.
- Or about data driven web vs. using the web for the web.
+ Or about data driven web vs. using the web for the web and trying to be semantic about it.
  )
 
 We all want things to be easy and rational.  It sounds logical to have one way to do everything.  
