@@ -6,6 +6,8 @@ I have an older blogspot or blogger site. I never got it configured correctly an
 
 [customElement Strategy](custom-element-overarching-strategy.md)
 
+[disconnectedCallback and removeEventListener](cleaningUpEvents.md)
+
 [customElements and AngularJs](customElements.md)
 
 [Bootstrap and CustomElements and ShadowDOM](bootstrapAndCustomElements.md)
