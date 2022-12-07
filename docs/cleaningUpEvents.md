@@ -3,7 +3,7 @@
 I use to use the bound method. Where you have the function, then a named property that binds this to the function. Then you have a named property to delet in the disconnected callback.
 This approach works but has a bit too much ceremony and verbosity for my liking. 
 
-Today on StackOverflow I saw an example using the abort controller.  
+Today on StackOverflow I saw an example using the abort controller.  [StackOverflow removing anonymous events](https://stackoverflow.com/a/72673200/654366)
 I've used the abort controller before but never thought to use it for cleaning up events on disconnected callback.
 
 This approach works great with ananoymous functions and I really like the separation of concerns.
