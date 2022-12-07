@@ -1,5 +1,7 @@
 # Cleaning up events in disconnectedCallback
 
+Older article, still good but see [Cleaning up events on disconnectedCallback](cleaningUpEvents.md)
+
 ## Backstory
 In my first major native web components project was not a SPA. It was mainly forms with a shared header, footer, modals, etc. 
 If I had a memory leak, no big deal, even if a user failed at filling out a form 50 different times, it would not 'leak' enough to matter.
