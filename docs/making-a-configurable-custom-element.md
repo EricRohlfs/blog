@@ -8,7 +8,7 @@ If I get time I'll put up a real world example.
   //myCustomElement.js
   export function makeMyCustomElement(cfg){
     const myCustomElement = class extends HTMLElement{
-      ... all the usual stuff, but can reference the cfg
+      ... all the usual stuff, but can use the cfg
     }
     
     return myCustomElement
