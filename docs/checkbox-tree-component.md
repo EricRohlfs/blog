@@ -2,8 +2,7 @@
 
 (This is specifically about making the actual checkbox that is used in a checkbox-tree component, which has way more code that I thought it would take! )
 
-
-The native <input type="checkbox"/> did not work for me.
+The native &lt; input type="checkbox"/ &gt; did not work for me.
 
 My tree component has the ability to check a parent and then cascade that value to all the children. AND... have the ability to undo if it was a mistake.
 
@@ -36,6 +35,7 @@ The code below is not complete. Missing a constructor, icons and change icon imp
 
 ```
 // typescript magic so we can treat the following as a type without using enums.
+// Special thanks to David for showing me this trick.
   export const states = {
     unchecked: 'unchecked',
     checked: 'checked',
