@@ -1,5 +1,8 @@
 # Building a checkbox tree component
 
+(This is specifically about making the actual checkbox that is used in a checkbox-tree component, which has way more code that I thought it would take! )
+
+
 The native <input type="checkbox"/> did not work for me.
 
 My tree component has the ability to check a parent and then cascade that value to all the children. AND... have the ability to undo if it was a mistake.
@@ -13,7 +16,9 @@ Simply reversing the boolean checked doesn't work becasue there are three states
 
 Instead of using the native input element.  I created a new component that uses svg's for the three states listed above, and support disabled by graying out the background of the svg's.
 
-The new component is much easier to controll the state with because I can control when to make the change in the UI or overall state.
+State management is much easier with my custom control, because a parent item can control the click event, vs. just being a reciever of a click event with the change already taken place.  (There may be a way to do this by reading a property in the input change event, but I was already annoyed with the checked and indeterminate properties so I worte my own.)
+
+I originally wanted to participate in formEvents, but given the nature of a big textbox tree (think a bunch of nested ul and li items), it does not need to participate in form events. But if I did need to do it, I could make an invisible child element that this class could control the state.)
 
 Here is the public inteface. 
 
