@@ -31,7 +31,7 @@ Here is the public inteface.
 ```
 
 In my implementation, I'm use observedAttributes and attributeChangedCallback to add reactivity to it.
-The code below is not complete. Missing a constructor, icons and change icon implementaion, but you should be able to figure all that out.
+The code below is not complete. I'm sure there are parts missing, but you should be able to figure all that out.
 
 ```
 // typescript magic so we can treat the following as a type without using enums.
@@ -67,6 +67,17 @@ export class iconCheckbox extends HTMLElement {
   }
   set state(val:checkboxStates){
     this.setAttribute('state',val);
+  }
+ 
+  get disabled(){
+    return this.hasAttribute('disabled')
+  }
+  set disabled(val:boolean){
+    if(val === true){
+      this.setAttribute('disabled','')
+      return
+    }
+    this.removeAttribute('disabled');
   }
   
   
