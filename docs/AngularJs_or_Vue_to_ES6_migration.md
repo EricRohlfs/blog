@@ -37,4 +37,15 @@ If using attributeChangedCallback for managing a ui-state="loading" attribute. T
     }
   }
 
+  loadingTemplateLit(){
+    // html is our taggedTemplate security function. You can make your own, see MDN for named or tagged template literals
+    return html`<div>Loading</div>`
+  }
+  
+  showFormTemplateLit(){
+    // put form html below
+    return html``
+  }
+  
+
 ```
