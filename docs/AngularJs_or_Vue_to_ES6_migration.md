@@ -23,6 +23,10 @@ I would copy and paste the ng-show html into the function as a template literal,
 If using attributeChangedCallback for managing a ui-state="loading" attribute. Then the attribute changed callback can stitch it all together.
 
 ```
+
+export class myTodoListForm extends HTMLFormElement(){
+ // this is not fully functioning
+
   attributeChangedCallback(name, oldval, newval){
     if(name === 'ui-state'){
       // can move this to a uiStateMgr function to prevent nesting and keep this function a bit cleaner
@@ -47,5 +51,6 @@ If using attributeChangedCallback for managing a ui-state="loading" attribute. T
     return html``
   }
   
+ }
 
 ```
