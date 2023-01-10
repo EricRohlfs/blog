@@ -65,5 +65,10 @@ export class myTodoListForm extends HTMLFormElement(){
 
 Have your main template literal, then a separate templateliteral function for a row or whatever in your loop. Loop over the data and append the results of the JavaScript looping to the main template string or DOM element.
 
+## $http 
+Use the built in fetch api (see mdn)
+
+## $scope
+Same as this.foo 'this' in the custom element.
 
 
