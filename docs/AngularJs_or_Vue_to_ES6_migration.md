@@ -1,5 +1,10 @@
 # AngularJs or Vue migration to ES6
 
+## Template Literal Assumptions
+In template literals, data cannot contain HTML. HTML must be in the template. Use various techinques to meet this security decision.
+
+## Migration
+
 This is a general guide with some rules of thumb for where to start in a migration.
 
 I'll be adding new entries as I work through the migration of an app.
@@ -54,3 +59,11 @@ export class myTodoListForm extends HTMLFormElement(){
  }
 
 ```
+
+
+## ng-repeat or any looping
+
+Have your main template literal, then a separate templateliteral function for a row or whatever in your loop. Loop over the data and append the results of the JavaScript looping to the main template string or DOM element.
+
+
+
