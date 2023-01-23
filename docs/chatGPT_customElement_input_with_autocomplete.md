@@ -7,8 +7,7 @@ If it is vanilla, it is vanilla that may need some minor tweaks for making a cus
 One example, generated the code for using the keyboard to select 'options' like up-arrow, down-arrow using keyup event.  It was a pleasant detail to add.
 
 My main correction to this answer would be to put a builder function around it, so I can pass in callback functions for setting 
-new data to the 'options' and for setting the input via a callback. See https://github.com/EricRohlfs/blog/blob/main/docs/making-a-configurable-custom-element.md
-
+new data to the 'options' and for setting the input via a callback. See [making a configurable custom element](making-a-configurable-custom-element.md)
 
 My Question to ChatGPT
 ```
