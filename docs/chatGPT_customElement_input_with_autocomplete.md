@@ -16,6 +16,8 @@ create ES6 customElement for input element with autocomplete
 ```
 
 ```
+// unedited output from chatGPT 2023-01-23
+
 class AutocompleteInput extends HTMLInputElement {
   constructor() {
     super();
