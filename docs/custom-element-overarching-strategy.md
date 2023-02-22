@@ -34,3 +34,13 @@ The most heritical and important statement is __'update the largest amount HTML 
 - security XSS and XSRF
 - router - just mapping a url to a component and potentially passing some data via route changes
 - unit testing (Karma is recommended, but there is a trick when using typescript.)
+
+## Naming things
+
+DOM is the main page. Technically any document or document fragment can have a DOM, but unless specificed, this is the live page.
+
+- render - actually adds the thing to the DOM
+- create - creates the element, but does not add the item to the DOM 
+- lit - anything that does template literal work, might return an element or a string just depends on the work being done. Could be thought of as a specialized create function since it usually returns and element 
+
+examples - renderTBodyEle(), createTBodyEle(), templateLit(data)
