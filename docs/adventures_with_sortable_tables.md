@@ -1,6 +1,6 @@
 # Adventures with sortable table 
 
-(custom element definition aka CED)[customElementDefinition.md]
+[Component Element Description](customElementDefinition.md)
 
 # The interesting stuff
 
