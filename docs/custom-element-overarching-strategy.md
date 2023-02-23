@@ -42,5 +42,6 @@ DOM is the main page. Technically any document or document fragment can have a D
 - render - actually adds the thing to the DOM
 - create - creates the element, but does not add the item to the DOM 
 - lit - anything that does template literal work, might return an element or a string just depends on the work being done. Could be thought of as a specialized create function since it usually returns and element 
+- updateDOM - (I might change my mind on this later). The difference from render is this does not delete the DOM, it should mainly change attributes and text. It should not try to create elements. (I better be careful going down this road. I might end up with the vue lifecycle.)
 
 examples - renderTBodyEle(), createTBodyEle(), templateLit(data)
