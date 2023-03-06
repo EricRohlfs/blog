@@ -25,8 +25,13 @@ For this to work, after the element is created, we obviously do not want to add 
 I've tried several methods and the cleanest is to pass in on object, having argumnets get too weird given all the potential flags
 
 ```
+// for the unsafe string, instead you should have a tagged template literal that sanitizes and returns a documnetFragment
+
+const unsafeString = `<span>${somethingUnsafe}</span>`
 const myDiv = createElement({
   tagName:'div',
+  textContent:'I am text',
+  innerHtml = unsafeString
   ['foo-bar']:'hello', // adds property to the elemnt as fooBar
   attributes:{
     show:'true',
@@ -38,10 +43,20 @@ const myDiv = createElement({
   }
  });
  
+ myDiv.textContent // 'I am text'
+ myDiv.innerHTML // nothing, it is ignored, it does not escape the html.  For this type of work create a secure tagged template literal function that returns a document fragment then you can just append.
  myDiv.fooBar // hello
  myDiv.getAttribute('aria-busy') // 'true'
  myDiv.hasAttribute('show') // true
  myDiv.hasAttribute('off') // false
  myDiv.getAttribute('is') // 'my-fancy-component'
  
+```
+
+## An incomplete example of tagged template literal
+```
+import {html} from 'my-project-essentials'; // you will have to make your own. I have one, but can't share it.
+const userSuppliedInput = html`<span>${somethingUnsafe}</span>`
+myDiv.appendChild(userSuppliedInput);
+
 ```
