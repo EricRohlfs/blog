@@ -2,6 +2,8 @@
 
 I have an older blogspot or blogger site. I never got it configured correctly and all the info in there is old. Starting over and giving gh pages a try.
 
+[Boolean Attributes](boolean-attributes.md)
+
 [Creating and configuring children components](configuring-children-components.md)
 
 [Adventures building sortable table](adventures_with_sortable_tables.md)
