@@ -1,5 +1,7 @@
 # Boolean Attributes
 
+Some logic to consider when making your own createElement function
+
 https://developer.mozilla.org/en-US/docs/Glossary/Boolean/HTML
 
 According to the spec 
