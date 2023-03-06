@@ -1,6 +1,9 @@
 # Custom createElement
 
-The goal is to simplify development and gracefully handle annoying edge cases
+The goal is to simplify development and gracefully handle annoying edge cases.
+AND
+To use connical names.  For example, use 'tagName' vs 'name'. TagName is in the spec, and when you read for the property on the element, it's the same language.
+For this to work, after the element is created, we obviously do not want to add that property. So the internals will need to have a list of properties not to add.
 
 ## Features
 
@@ -26,6 +29,8 @@ const myDiv = createElement({
   tagName:'div',
   ['foo-bar']:'hello', // adds property to the elemnt as fooBar
   attributes:{
+    show:'true',
+    off:'false',
     is:'my-fancy-component',
     ['aria-busy']:'true', // or can be a javaScript boolean of true
     class: ['show','green'], // or could be a string
@@ -33,6 +38,10 @@ const myDiv = createElement({
   }
  });
  
- 
+ myDiv.fooBar // hello
+ myDiv.getAttribute('aria-busy') // 'true'
+ myDiv.hasAttribute('show') // true
+ myDiv.hasAttribute('off') // false
+ myDiv.getAttribute('is') // 'my-fancy-component'
  
 ```
