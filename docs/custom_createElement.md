@@ -1,5 +1,7 @@
 # Custom createElement
 
+see also [CED](customElementDefinition.md)
+
 The goal is to simplify development and gracefully handle annoying edge cases.
 AND
 To use connical names.  For example, use 'tagName' vs 'name'. TagName is in the spec, and when you read for the property on the element, it's the same language.
