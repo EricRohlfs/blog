@@ -32,3 +32,40 @@ If I get time I'll put up a real world example.
 
 ```
 
+Update 2023-03-07
+
+I recently had to work on a button component that uses shadowDom so it can be ported to several different apps with css side effects.
+
+The above pattern was tempting to use, but it felt excessive for an app to have to register hundreds of buttons AND you still need to query for them to attach click event handlers.
+
+In this case it was easier to just use a function to new up the element
+
+```
+
+// in use
+
+const openBtn = createShadyBtn({textContent:'ok'})
+openBtn.addEventListener('click',()=>{});
+
+// the shared code
+
+// this isn't the real template, just enough to pass along the idea
+function templateLit(props){
+return html`
+  <style> .container{ color:${props.color}</style>
+  <span class='container'><button>${props.textContent}</button></span>
+`
+const defaultProps ={
+  color:'black',
+  textContent:''
+}
+export function createShadyBtn(props){
+  const propsAll = {...defaultProps, ...props} // prevent errors and save time
+  const host createElement({tagName:'span'});
+  const shadow = host..attachShadow({ mode: 'open' });
+  const templateDocFrag = templateLit(props)
+  shadow.appendChild(templateDocFrag)
+  return host;
+}
+
+```
