@@ -2,16 +2,29 @@
 
 Overcomes the issues with not being able to pass in data to the constructor.
 
-If I get time I'll put up a real world example.
+This pattern is best used for one off components that are self contained after configured and registered in the customElement registry. 
+For example I have an SVG sprite custom element that needs to know the url for the sprites on app initialization. 
 
 ```
-  //myCustomElement.js
-  export function makeMyCustomElement(cfg){
-    const myCustomElement = class extends HTMLElement{
+// app.ts
+
+const svgSpriteCtor = createSvgSpriteCtor({url:'/public/images/svgsprites.svg'});
+customElement.define('svg-sprite', svgSpriteCtor);
+
+// somepage.html
+
+<div><svg-sprite sprite='checkmark'></svg-sprite>
+
+```
+
+```
+  //createSvgSpriteCtor.js
+  export function createSvgSpriteCtor(cfg){
+    const svgSprite = class extends HTMLElement{
       ... all the usual stuff, but can use the cfg
     }
     
-    return myCustomElement
+    return svgSprite
   }
 ```
 
