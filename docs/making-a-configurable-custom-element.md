@@ -34,11 +34,11 @@ If I get time I'll put up a real world example.
 
 Update 2023-03-07
 
-I recently had to work on a button component that uses shadowDom so it can be ported to several different apps with css side effects.
+I recently had to work on a button component that uses shadowDom so it can be ported to several different apps without experiencing css side effects.
 
-The above pattern was tempting to use, but it felt excessive for an app to have to register hundreds of buttons AND you still need to query for them to attach click event handlers.
+The pattern described above was tempting to use, but felt excessive for an app to have to register hundreds of buttons AND you still need to query for them to attach click event handlers.
 
-In this case it was easier to just use a function to new up the element
+In this case it was easier to just use a function to new up the element and not use custom elements at all, but still use shadowdom.
 
 ```
 
