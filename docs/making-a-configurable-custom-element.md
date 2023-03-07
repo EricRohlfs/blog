@@ -18,7 +18,7 @@ customElement.define('svg-sprite', svgSpriteCtor);
 ```
 
 ```
-  //createSvgSpriteCtor.js
+  //createSvgSprite.ts
   export function createSvgSpriteCtor(cfg){
     const svgSprite = class extends HTMLElement{
       ... all the usual stuff, but can use the cfg
@@ -29,21 +29,6 @@ customElement.define('svg-sprite', svgSpriteCtor);
 ```
 
 
-
-```
-// index.html
-
-  <script type="module">
-    import {makeMyCustomElement} from './myCustameElement.js'
-    const cfg = {}
-    const myCustomElement = makeMyCustomElement(cfg);
-    customElement.define('my-custom-ele', myCustomElement)
-    
-    const x = new myCustomElement(); // or any of the other ways to new up a custom element
-    document.body.append(x);
-  </script>
-
-```
 
 Update 2023-03-07
 
