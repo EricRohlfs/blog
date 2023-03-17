@@ -92,9 +92,6 @@ I'm sure I'm missing some parts or details. But this is all I can share right no
     "ts-node": "^10.9.1",
     "ts-sinon": "^2.0.2",
     "typescript": "^4.5.4"
-  },
-  "dependencies": {
-    "nrre-essentials": "^2.0.7"
   }
 }
 
