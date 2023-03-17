@@ -2,6 +2,8 @@
 
 I have an older blogspot or blogger site. I never got it configured correctly and all the info in there is old. Starting over and giving gh pages a try.
 
+[AzureDevOps unit testing coverage report with Karma(karma-azure-dev-ops.md)
+
 [Improving createElement](custom_createElement.md)
 
 [Boolean Attributes](boolean-attributes.md)
