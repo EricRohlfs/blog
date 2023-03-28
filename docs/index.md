@@ -1,6 +1,5 @@
-## My github blog
+## Eric Rohlfs customElements blog
 
-I have an older blogspot or blogger site. I never got it configured correctly and all the info in there is old. Starting over and giving gh pages a try.
 
 [ele.isConnected true before or after connectedCallback](isConnected.md)
 
