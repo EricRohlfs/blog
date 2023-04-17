@@ -3,6 +3,7 @@
 ## Goals
 * Secure templates (no xss or vulnerabilities)
 * Improved developer experience
+* Allows to do all work like attach events before appending to the DOM
 * only use .innerHTML in one place in the entire code base. Have a linter plug in enforce this with the one exception being this function.
 
 
@@ -15,7 +16,10 @@ Breakdown of the 'html' in templateLit()
   export class myComponent extends HTMLElement{
     
     connectedCallback(){
-      this.append(this.templateLit());
+      const frag = this.templateLit()
+      const submit = frag.queryselector('button')
+      submit.addeventListener('click', submitEventHandler)
+      this.append(frag); // append to the DOM after you have event handlers and other work complete.
     }
     
     templateLit(){
@@ -61,10 +65,11 @@ Cannot nest html via html`<div>${childHtmlString}</div>`.
 
 This hasn't been an issue for me. I have several work arounds
 
-### As a whole different component 
+### Workaround As a whole different component 
 
 ``` html`<div><child-component></child-component></div> ```
 
+### Workaround as separate template literal and append where needed before painting to the DOM
 ```
   const frag = this.templateLit()
   const childLocation = frag.querySelectort('something')
