@@ -1,5 +1,11 @@
 # Template Literal Sanitization with Named or Tagged Template Literals 
 
+## Goals
+* Secure templates (no xss or vulnerabilities)
+* Improved developer experience
+* only use .innerHTML in one place in the entire code base. Have a linter plug in enforce this with the one exception being this function.
+
+
 The 'html' and ['createElement'](https://ericrohlfs.github.io/blog/custom_createElement.html) functions are a strong foundation for working with custom elements with minimal amount of helper code.
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
@@ -45,4 +51,24 @@ Before you return you can do extra work like:
 Table related elements are different, instead of using a div to add the sanitized string, I use the 'table' element. 
 
 For tables I export a slightly different function 'htmlTable' vs 'html'.  Everything is the same, except a table element is created vs. a div. 
+
+### Character clean up
+I've done both the regex way to clean up data and I have used createTextNode. CreateTextNode is a bit more code, and does the same thing.
+
+# Disadvantage of this approach
+
+Cannot nest html via html`<div>${childHtmlString}</div>`.
+
+This hasn't been an issue for me. I have several work arounds
+
+### As a whole different component 
+
+``` html`<div><child-component></child-component></div> ```
+
+```
+  const frag = this.templateLit()
+  const childLocation = frag.querySelectort('something')
+  // treat is just like the parent and append it where it is needed.
+  childLocation.append(this.templateLitSomeChildHTML());
+```
 
