@@ -1,5 +1,6 @@
 ## Eric Rohlfs customElements blog
 
+[Template Literal Sanitization](html_tagged_template_literal.md)
 
 [ele.isConnected true before or after connectedCallback](isConnected.md)
 
