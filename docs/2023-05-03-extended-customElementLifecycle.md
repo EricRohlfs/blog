@@ -9,7 +9,7 @@
 
 ## Extended Lifecycle
 
-### connectedCallback
+### Extended Lifecycle in connectedCallback
 (Still working on more creative names)
 
 The outline below is more of a thought process than named callbacks or hooks.
