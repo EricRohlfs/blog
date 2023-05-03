@@ -1,5 +1,5 @@
 # Additional Custom Element Lifecycle
-(Work in progress. Want to add notes for constructor and others and expand updates a bit.)
+(Work in progress. Want to add notes for constructor and others. Add details to Updates. Outline how component creation makes a difference: createElement vs. tag-on-dom or tag-in-template.)
 
 ## Built-in lifecycle.
 
