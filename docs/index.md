@@ -1,5 +1,7 @@
 ## Eric Rohlfs customElements blog
 
+[Extended Component Lifecycle](2023-05-03-extended-customElementLifecycle.md)
+
 [Template Literal Sanitization](html_tagged_template_literal.md)
 
 [ele.isConnected true before or after connectedCallback](isConnected.md)
