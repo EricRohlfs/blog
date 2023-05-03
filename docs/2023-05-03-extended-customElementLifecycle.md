@@ -27,6 +27,11 @@ connectedCallback(){
 }
 
 templateLit(){
-
+   // html tagged template returns a document fragment that is not added to the DOM yet.
+   return html`<div>
+      <div><span>${this.user.firstName} ${this.user.lastName}</span></div>
+      <div><button>Close</div>
+    
+     </div>`
 }
 ```
