@@ -1,4 +1,5 @@
 # Additional Custom Element Lifecycle
+(Work in progress. Want to add notes for constructor and others and expand updates a bit.)
 
 ## Built-in lifecycle.
 
