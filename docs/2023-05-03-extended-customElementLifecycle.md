@@ -35,7 +35,7 @@ Note: all examples assume they are wrapped in a class that creates a custom elem
 
 Example 1
 ```
-export class UserDetailsEle Extends HTMLDivElement{
+export class UserDetailsEle extends HTMLDivElement{
 ...
 connectedCallback(){
   // pre-template-lit
