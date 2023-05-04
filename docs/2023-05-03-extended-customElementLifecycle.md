@@ -135,7 +135,10 @@ connectedCallback(){
 }
 
 /*
-* I repaint the child DOM unless I think there will be events attached to it by outer elements. input elements and other from elements I might not re-paint, but would instead just update the values in the elements.
+* I repaint the child DOM unless I think there will be
+*  events attached to it by outer elements.
+*  Input elements and other from elements I might not re-paint. 
+*  I would instead just update the values in the elements.
 */
 updateUserDetails(firstName, lastName){
   this.user.firstName = firstName
@@ -157,7 +160,4 @@ userDetailsLit(){
 }
 
 ```
-
-
-
 
