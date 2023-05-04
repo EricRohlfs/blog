@@ -133,7 +133,7 @@ connectedCallback(){
   // strive to only query once
   this.userDetailsContainer = mainFrag.querySelector('.user-details')
   userDetialsContainer.append(this.userDetailsLit())
-  this.appendn(mainFrag)
+  this.append(mainFrag)
 }
 
 /*
