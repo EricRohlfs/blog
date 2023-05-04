@@ -114,3 +114,52 @@ loadingTemplateLit(){
   return html`<div>Loading</div>`
 }
 ```
+
+## Reactivity 
+When adopting this approach, I found that I do not need reactivity as much as I thought I did.
+
+Reactivity happens either:
+
+* by calling an update function in your component 
+* modifying an attribute - usually done in JavaScript too
+
+### Reactivity via a update function
+
+```
+
+connectedCallback(){ 
+ ... 
+  const mainFrag = this.mainTemplateLit()
+  // strive to only query once
+  this.userDetailsContainer = mainFrag.querySelector('.user-details')
+  userDetialsContainer.append(this.userDetailsLit())
+  this.appendn(mainFrag)
+}
+
+/*
+* I repaint the child DOM unless I think there will be events attached to it by outer elements. input elements and other from elements I might not re-paint, but would instead just update the values in the elements.
+*/
+updateUserDetails(firstName, lastName){
+  this.user.firstName = firstName
+  this.user.lastName = lastName
+  this.userDetailsContainer.replaceChildren()
+  this.userDetailsContainer.append(this.userDetailsLit())
+}
+
+mainTemplateLit(){
+  return html`<div>
+    <h1>Hello</h1>
+    <div class='user-details'></div>
+  </div>`
+}
+
+
+userDetailsLit(){
+  return html`<span>${this.user.firstName} ${this.user.lastName}</span>`
+}
+
+```
+
+
+
+
