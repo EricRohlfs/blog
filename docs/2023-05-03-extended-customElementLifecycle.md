@@ -16,7 +16,7 @@
 The outline below is more of a thought process than named callbacks or hooks.
 
 * pre-template-lit
-* post-template-lit or pre-paint (samething)
+* post-template-lit or pre-paint (same thing)
 * post-paint - rarely if ever gets used. But here for conceptual purposes.
 * updates - technically not part of the connectedCallback, update functions are called after connectedCallback is finished. These are custom functions that modify elements in the template, or could even just re-render the whole template.
 
@@ -24,10 +24,10 @@ The outline below is more of a thought process than named callbacks or hooks.
 Get things ready so you can turn the template into a document fragment.
 
 #### pre-paint
-You have a document fragment, now attach events and get everything ready so when you attach to the DOM it is ready for the user, a script, or other elements to interact with. Other elements maybe using mutationObserver to wait for the paint then do work. Adding html to the DOM before things are ready can cause issues.
+You have a document fragment, now attach events and get everything ready so when the fragment is attached to the DOM it is ready for the user or script or other customElements to interact with. Other elements maybe using mutationObserver to wait for the paint then do work. Adding html to the DOM before things are ready can cause issues.
 
 #### post-paint
-I can't think of anything that would go here. This is more conceptual, other components might interact with your component post paint via using mutation observers or maybe thrown events. Note: I have not had the issue of other components interacting with my components too early using this approach. I do NOT recommend throwing an event that your component is painted on the screen. If everything is setup before paint, throwing events is just extra work or maybe a sign your architecture needs more work.
+I can't think of anything that would go here. This is more conceptual, other components might interact with the component post paint via using mutation observers or maybe thrown events. Note: I have not had the issue of other components interacting with my components too early using this approach. I do NOT recommend throwing an event like 'is-painted'. If everything is setup before paint, throwing events is just extra work or maybe a sign your architecture needs more work.
 
 Example 1
 ```
@@ -51,6 +51,11 @@ connectedCallback(){
   this.append(frag)
   
   // post-paint - nothing to do in this example
+}
+
+disconnectedCallback(){
+  this.abortController.abort('disconnected')
+  this.user = null // can optionally clear out any large data sets. This is not large and I probbaly wouldn't bother cleaning it up in a real component.
 }
 
 templateLit(){
@@ -90,6 +95,11 @@ connectedCallback(){
   this.append(frag) // overwrites the loading templatelit
   
   // post-paint - still nothing to do here.
+}
+
+disconnectedCallback(){
+  this.abortController.abort('disconnected')
+  this.user = null // can optionally clear out any large data sets. This is not large and I probbaly wouldn't bother cleaning it up in a real component.
 }
 
 templateLit(){
