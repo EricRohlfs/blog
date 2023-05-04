@@ -1,5 +1,5 @@
 # Additional Custom Element Lifecycle
-(Work in progress. Want to add notes for constructor and others. Add details to Updates. Outline how component creation makes a difference: createElement vs. tag-on-dom or tag-in-template.)
+(Work in progress. Want to add notes for constructor and others. Add details to Updates. Outline how component creation makes a difference: createElement vs. tag-in-template. Also map to vue or react lifecycles. )
 
 ## Built-in lifecycle.
 
