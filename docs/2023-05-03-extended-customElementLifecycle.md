@@ -45,8 +45,7 @@ connectedCallback(){
   
   this.abortController = new AbortController() // this needs to be in the connectedCallback, do not create in the constructor.
   this.button = frag.querySelector(':scope button')
-  this.button.addEventListener('click',()=>{ // do something interesting
-  },signal:this.abortController.signal)
+  this.button.addEventListener('click',()=>{ // do something interesting },signal:this.abortController.signal)
   
   this.append(frag)
   
@@ -89,8 +88,7 @@ connectedCallback(){
   // pre-paint
   this.abortController = new AbortController()
   this.button = frag.querySelector(':scope button')
-  this.button.addEventListener('click',()=>{ // do something interesting
-  },signal:this.abortController.signal)
+  this.button.addEventListener('click',()=>{ // do something interesting },signal:this.abortController.signal)
   
   this.append(frag) // overwrites the loading templatelit
   
