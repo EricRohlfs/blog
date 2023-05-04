@@ -18,7 +18,7 @@ The outline below is more of a thought process than named callbacks or hooks.
 * pre-template-lit
 * post-template-lit or pre-paint (same thing)
 * post-paint - rarely if ever gets used. But here for conceptual purposes.
-* updates - technically not part of the connectedCallback, update functions are called after connectedCallback is finished. These are custom functions that modify elements in the template, or could even just re-render the whole template.
+* updates - (see the reactivity section later in this article) technically not part of the connectedCallback, update functions are called after connectedCallback is finished. These are custom functions that modify elements in the template, or could even just re-render the whole template.
 
 #### pre-template-lit
 Get things ready so you can turn the template into a document fragment.
@@ -28,6 +28,8 @@ You have a document fragment, now attach events and get everything ready so when
 
 #### post-paint
 I can't think of anything that would go here. This is more conceptual, other components might interact with the component post paint via using mutation observers or maybe thrown events. Note: I have not had the issue of other components interacting with my components too early using this approach. I do NOT recommend throwing an event like 'is-painted'. If everything is setup before paint, throwing events is just extra work or maybe a sign your architecture needs more work.
+
+Note: all examples assume they are wrapped in a class that creates a custom element.  I may come back and add that in at a future time.
 
 Example 1
 ```
