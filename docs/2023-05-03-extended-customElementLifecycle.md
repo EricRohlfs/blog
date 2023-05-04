@@ -35,6 +35,7 @@ Note: all examples assume they are wrapped in a class that creates a custom elem
 
 Example 1
 ```
+export class UserDetailsEle Extends HTMLDivElement{
 ...
 connectedCallback(){
   // pre-template-lit
@@ -72,8 +73,27 @@ templateLit(){
 loadingTemplateLit(){
   return html`<div>Loading</div>`
 }
+}
 ```
 
+Example 1 being used in another component
+```
+import {createElement} from '....somewhere'
+// see my blog on my custom createElement function //todo: put a link here
+ const userDetails = createElement({
+    tagName:'div',
+    attributes:{
+      is:'user-details'
+    }
+    properties:{
+       user:{ 
+        firstName:'Jane',
+        lastName:'Doe'
+    }
+ })
+
+this.append(userDetails)
+```
 
 Example 2 - multiple lifecycles in the connectedCallback
 ```
