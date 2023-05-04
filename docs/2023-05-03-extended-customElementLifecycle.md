@@ -147,6 +147,8 @@ Reactivity happens either:
 
 ### Reactivity via a update function
 
+(Technically not reativity, but achieves the same goal, making changes to the DOM. In a true reactive system we would change the data and the UI would update. This is a manual process.)
+
 ```
 
 connectedCallback(){ 
@@ -185,3 +187,14 @@ userDetailsLit(){
 
 ```
 
+Reactive component being used
+```
+import {createElement} from '....somewhere'
+// see my blog on my custom createElement function //todo: put a link here
+const userDetails = createElement({ // same as the first usage example in this article})
+this.append(userDetails)
+// something interesting happens like another component want to change the user
+
+userDetails.update('Jane', 'Doe') // or this could be designed to take a user object.
+
+```
