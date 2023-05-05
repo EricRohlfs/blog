@@ -193,8 +193,8 @@ import {createElement} from '....somewhere'
 // see my blog on my custom createElement function //todo: put a link here
 const userDetails = createElement({ // same as the first usage example in this article})
 this.append(userDetails)
-// something interesting happens like another component want to change the user
+// something interesting happens, maybe an event
 
-userDetails.update('Jane', 'Doe') // or this could be designed to take a user object.
+   userDetails.update('Jane', 'Doe') // or this could be designed to take a user object.
 
 ```
