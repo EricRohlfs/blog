@@ -15,7 +15,7 @@
 
 The outline below is more of a thought process than named callbacks or hooks.
 
-* pre-template-lit
+* pre-template-lit or pre-lit (easier to say)
 * pre-paint (or could be thought of as post-template-lit, but pre-paint rolls off the tongue better.)
 * post-paint - rarely if ever gets used. But here for conceptual purposes.
 * updates - (see the reactivity section later in this article) technically not part of the connectedCallback, update functions are called after connectedCallback is finished. These are custom functions that modify elements in the template, or could even just re-render the whole template.
