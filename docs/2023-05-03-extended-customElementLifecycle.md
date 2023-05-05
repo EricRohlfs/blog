@@ -147,7 +147,7 @@ Reactivity happens either:
 
 ### Reactivity via a update function
 
-(Technically not reativity, but achieves the same goal, making changes to the DOM. In a true reactive system we would change the data and the UI would update. This is a manual process.)
+(Technically not reactivity or 'data driven reactivity', but achieves the same goal, making changes to the DOM. In a true reactive system we would change the data and the UI would update.)
 
 ```
 
