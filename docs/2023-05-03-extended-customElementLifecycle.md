@@ -81,7 +81,7 @@ The outline below is more of a thought process than named callbacks or hooks.
 * post-paint - rarely if ever gets used. But here for conceptual purposes.
 * updates - (see the reactivity section later in this article) technically not part of the connectedCallback, update functions are called sometime later by an event or some action; long after connectedCallback is finished. These are custom functions that modify elements in the template, or could even just re-render the whole template.
 
-I might later get rid of post paint and go straight to updates, even though they are not part of the connectedCallback.
+I might later get rid of post paint and go straight to updates, even though updates are not part of the connectedCallback.
 
 #### pre-template-lit
 Get things ready to turn the template into a document fragment.
