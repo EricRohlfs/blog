@@ -139,10 +139,14 @@ loadingTemplateLit(){
 ## Reactivity 
 When adopting this approach, I found that I do not need or use reactivity most of the time. When using vue,react,angular, since reactivity is there and cheap, it can easily be over used.
 
+For the sake of this article, reactivity happens after the element is painted on the DOM, and things need to change.
+
 Reactivity happens either:
 
 * by calling an update function in your component 
-* modifying an attribute - usually done in JavaScript too
+* modifying an attribute - nothing special here just follow the attributeChangedCallback as per the ES6 spec. Recommend calling the update function.
+
+Note on modifying an attribute: The value of the attribute route is low. Chances are you are modifying the attribute using JavaScript. Modifying an attribute is about the same amount of code as just calling an update function. But there is a big difference between using attributes to set values before an element is rendered to the page and after. Using attributes to set initial values does not need to use attributeChangedCallback.
 
 ### Reactivity via a update function
 
