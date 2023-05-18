@@ -90,7 +90,7 @@ Get things ready to turn the template into a document fragment.
 The template is now a document fragment. Before painting, attach events and do any other work so when the fragment is appended/painted to the live-DOM it is ready for the user/script/ or other customElements to interact with it. Other elements maybe using mutationObserver to wait for the paint then do work. The whole point is to avoid adding html to the live-DOM too early and then trying to compensate.
 
 #### post-paint
-I can't think of anything that would go here. This is more conceptual, other components might interact with the component post paint via using mutation observers or maybe thrown events. Note: I have not had the issue of other components interacting with my components too early using this approach. I do NOT recommend throwing an event like 'is-painted'. If everything is setup before paint, throwing events is just extra work or maybe a sign your architecture needs more work.
+I can't think of anything that would go here. This is more conceptual, other components might interact with the component post paint via using mutation observers or maybe thrown events. Note: I have not had the issue of other components interacting with my components too early using this approach. I do NOT recommend throwing an event like 'is-painted'. If everything is setup before paint, throwing events is just extra work. This is not to say never throw events. Just I've never needed an event thrown to tell me the item was painted on the page.
 
 Example 2 - multiple lifecycles in the connectedCallback
 ```
