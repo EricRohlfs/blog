@@ -142,7 +142,7 @@ For the sake of this article, reactivity happens after the element is painted on
 Reactivity happens either:
 
 * by calling an update function in your component 
-* modifying an attribute - nothing special here just follow the attributeChangedCallback as per the ES6 spec. Recommend calling the update function.
+* modifying an attribute - nothing special here just follow the attributeChangedCallback as per the ES6 spec. Recommend calling an update function from attributeChangedCallback so both of these strategies are supported.
 
 Note on modifying an attribute: The value of the attribute route is low. Chances are you are modifying the attribute using JavaScript. Modifying an attribute is about the same amount of code as just calling an update function. But there is a big difference between using attributes to set values before an element is rendered to the page and after. Using attributes to set initial values does not need to use attributeChangedCallback.
 
