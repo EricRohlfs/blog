@@ -10,10 +10,7 @@ For a recap here is the built in lifecycle for ES6 custom elements
 * disconnectedCallback
 
 ### Extended Lifecycle in connectedCallback
-(Still working on more creative names)
 
-
-Note: all examples assume they are wrapped in a class that creates a custom element.  I may come back and add that in at a future time.
 
 Example 1
 ```
