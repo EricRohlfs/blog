@@ -8,28 +8,9 @@
 * attributeChangedCallback
 * disconnectedCallback
 
-## Extended Lifecycle
-
 ### Extended Lifecycle in connectedCallback
 (Still working on more creative names)
 
-The outline below is more of a thought process than named callbacks or hooks.
-
-* pre-template-lit or pre-lit (easier to say)
-* pre-paint (or could be thought of as post-template-lit, but pre-paint rolls off the tongue better.)
-* post-paint - rarely if ever gets used. But here for conceptual purposes.
-* updates - (see the reactivity section later in this article) technically not part of the connectedCallback, update functions are called sometime later by an event or some action; long after connectedCallback is finished. These are custom functions that modify elements in the template, or could even just re-render the whole template.
-
-I might later get rid of post paint and go straight to updates, even though they are not part of the connectedCallback.
-
-#### pre-template-lit
-Get things ready so you can turn the template into a document fragment.
-
-#### pre-paint
-The template is now a document fragment. Before painting, attach events and do any other work so when the fragment is appended/painted to the live-DOM it is ready for the user/script/ or other customElements to interact with it. Other elements maybe using mutationObserver to wait for the paint then do work. The whole point is to avoid adding html to the live-DOM too early and then trying to compensate.
-
-#### post-paint
-I can't think of anything that would go here. This is more conceptual, other components might interact with the component post paint via using mutation observers or maybe thrown events. Note: I have not had the issue of other components interacting with my components too early using this approach. I do NOT recommend throwing an event like 'is-painted'. If everything is setup before paint, throwing events is just extra work or maybe a sign your architecture needs more work.
 
 Note: all examples assume they are wrapped in a class that creates a custom element.  I may come back and add that in at a future time.
 
@@ -94,6 +75,24 @@ import {createElement} from '....somewhere'
 
 this.append(userDetails)
 ```
+
+The outline below is more of a thought process than named callbacks or hooks.
+
+* pre-template-lit or pre-lit (easier to say)
+* pre-paint (or could be thought of as post-template-lit, but pre-paint rolls off the tongue better.)
+* post-paint - rarely if ever gets used. But here for conceptual purposes.
+* updates - (see the reactivity section later in this article) technically not part of the connectedCallback, update functions are called sometime later by an event or some action; long after connectedCallback is finished. These are custom functions that modify elements in the template, or could even just re-render the whole template.
+
+I might later get rid of post paint and go straight to updates, even though they are not part of the connectedCallback.
+
+#### pre-template-lit
+Get things ready to turn the template into a document fragment.
+
+#### pre-paint
+The template is now a document fragment. Before painting, attach events and do any other work so when the fragment is appended/painted to the live-DOM it is ready for the user/script/ or other customElements to interact with it. Other elements maybe using mutationObserver to wait for the paint then do work. The whole point is to avoid adding html to the live-DOM too early and then trying to compensate.
+
+#### post-paint
+I can't think of anything that would go here. This is more conceptual, other components might interact with the component post paint via using mutation observers or maybe thrown events. Note: I have not had the issue of other components interacting with my components too early using this approach. I do NOT recommend throwing an event like 'is-painted'. If everything is setup before paint, throwing events is just extra work or maybe a sign your architecture needs more work.
 
 Example 2 - multiple lifecycles in the connectedCallback
 ```
