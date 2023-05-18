@@ -137,7 +137,7 @@ loadingTemplateLit(){
 ```
 
 ## Reactivity 
-When adopting this approach, I found that I do not need reactivity as much as I thought I did.
+When adopting this approach, I found that I do not need or use reactivity most of the time. When using vue,react,angular, since reactivity is there and cheap, it can easily be over used.
 
 Reactivity happens either:
 
