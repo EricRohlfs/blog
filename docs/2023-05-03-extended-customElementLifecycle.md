@@ -4,7 +4,7 @@
 #### Related Articles:
 
 * [html tagged template lit sanitizer](./html_tagged_template_literal.md)
-* ['createElement'](./custom_createElement.md)
+* [createElement](./custom_createElement.md)
 
 ## Built-in lifecycle.
 For a recap here is the built in lifecycle for ES6 custom elements
