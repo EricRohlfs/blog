@@ -39,14 +39,14 @@ const myDiv = createElement({
 
 Example: same as above but class as an array
 ```
-const color = 'green'
+const color = 'gray'
 const myDiv = createElement({
   tagName:'div',
   attributes: {
     class:['large', color]
   }
  });
- // <div class="large"></div>
+ // <div class="large gray"></div>
 ```
 
 Example: basic custom element using 'is' where custom element extends HTMLDivElement vs. HTMLElement
