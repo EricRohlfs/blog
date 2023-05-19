@@ -64,9 +64,9 @@ I've done both the regex way to clean up data and I have used createTextNode. Cr
 
 Cannot nest html via html`<div>${childHtmlString}</div>`.
 
-This hasn't been an issue for me. I have several work arounds
+This hasn't been an issue for me. I have several work arounds. Either a separate component, or a separate template in the same component.
 
-### Workaround As a whole different component 
+### Workaround As separate component 
 
 ``` html`<div><child-component></child-component></div> ```
 
