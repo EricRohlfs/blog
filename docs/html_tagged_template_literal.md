@@ -3,8 +3,8 @@
 ## Goals
 * Secure templates (no xss or vulnerabilities)
 * Improved developer experience
-* Allows to do all work like attach events before appending to the DOM
-* only use .innerHTML in one place in the entire code base. Have a linter plug in enforce this with the one exception being this function.
+* Allows developers to do work before painting to the DOM like attaching events to internal elements before painting to the DOM.
+* Only use .innerHTML in one place in the entire code base. Have a linter plug in enforce this with the one exception being this function.
 
 
 The 'html' and ['createElement'](https://ericrohlfs.github.io/blog/custom_createElement.html) functions are a strong foundation for working with custom elements with minimal amount of helper code.
@@ -13,7 +13,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
 
 Breakdown of the 'html' in templateLit()
 ```
-  export class myComponent extends HTMLElement{
+  export class myComponent extends HTMLElement {
     
     connectedCallback(){
       const frag = this.templateLit()
