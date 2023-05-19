@@ -7,7 +7,7 @@
 * Only use .innerHTML in one place in the entire code base. Have a linter plug in enforce this with the one exception being this function.
 
 
-The 'html' and ['createElement'](https://ericrohlfs.github.io/blog/custom_createElement.html) functions are a strong foundation for working with custom elements with minimal amount of helper code.
+The 'html' and ['createElement'](https://ericrohlfs.github.io/blog/custom_createElement.html) functions are a strong foundation for working with custom elements with minimal amount of helper code. This article discusses my 'html' tagged template literal function.
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 
