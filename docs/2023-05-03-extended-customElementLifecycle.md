@@ -1,6 +1,8 @@
 # Additional Custom Element Lifecycle
 (Work in progress. Want to add notes for constructor and others. Add details to Updates. Outline how component creation makes a difference: createElement vs. tag-in-template. Also map to vue or react lifecycles. )
 
+(see also html tagged template lit sanitizer)[html_tagged_template_literal.md]
+
 ## Built-in lifecycle.
 For a recap here is the built in lifecycle for ES6 custom elements
 
