@@ -113,6 +113,7 @@ Example: defineProperties
 Use Cases:
   * Freeze a value so it cannot be changed
   * Stash some data in an element that is not part of the formal definition and you need that data to be enumerable - rarely happens but have had to do it a few times.
+
 ```
 import {UserDetails} from './userDetails.js'
 const userDetailsCED = { // CED is component element description
@@ -142,6 +143,7 @@ export class Router{
 Example: Older example with several extra use cases
 
 ```
+
 // for the unsafe string, instead you should have a tagged template literal that sanitizes and returns a documnetFragment
 
 const unsafeString = `<span>${somethingUnsafe}</span>`
