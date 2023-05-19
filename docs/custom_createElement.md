@@ -92,7 +92,7 @@ const userDetails = createElement<UserDetails>({
   }
  });
 
- console.info(myDiv.show) // does not throw typescript error.
+ console.info(myDiv.user.firstName) // returns 'Jane'
 ```
 
 Example: defineProperties 
