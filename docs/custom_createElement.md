@@ -37,6 +37,18 @@ const myDiv = createElement({
  // <div class="large"></div>
 ```
 
+Example: same as above but class as an array
+```
+const color = 'green'
+const myDiv = createElement({
+  tagName:'div',
+  attributes: {
+    class:['large', color]
+  }
+ });
+ // <div class="large"></div>
+```
+
 Example: basic custom element using 'is' where custom element extends HTMLDivElement vs. HTMLElement
 ```
 const myDiv = createElement({
@@ -85,23 +97,36 @@ const userDetails = createElement<UserDetails>({
 
 Example: defineProperties 
 [see MDN for details](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties)
-
+Use Cases:
+  * Freeze a value so it cannot be changed
+  * Stash some data in an element that is not part of the formal definition and you need that data to be enumerable - rarely happens but have had to do it a few times.
 ```
 import {UserDetails} from './userDetails.js'
-const userDetails = createElement<UserDetails>({
+const userDetailsCED = { // CED is component element description
   tagName:'user-details',
   defineProperties:{
-    user: {
-      firstName: 'Jane',
-      lastName: 'Doe'
+    userId:{
+      value:'12345',
+      writable: false,
+      enumerable: true
     }
   }
  });
 
- console.info(myDiv.show) // does not throw typescript error.
+const router = this.closest('router') // find a parent component router element
+router.change('#/user/12345', userDetailsCED)
+
+// the router would have code something like this
+export class Router{
+  ...
+  change(route, ced){
+    const component = createElement(ced)
+    ... // do work to insert the component
+  }
+ }
 ```
 
-
+Example: Older example with several extra use cases
 
 ```
 // for the unsafe string, instead you should have a tagged template literal that sanitizes and returns a documnetFragment
