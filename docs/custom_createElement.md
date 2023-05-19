@@ -26,6 +26,83 @@ For this to work, after the element is created, we obviously do not want to add 
 
 I've tried several methods and the cleanest is to pass in on object, having argumnets get too weird given all the potential flags
 
+Example: basic element - not a custom element
+```
+const myDiv = createElement({
+  tagName:'div',
+  attributes: {
+    class:'large'
+  }
+ });
+ // <div class="large"></div>
+```
+
+Example: basic custom element using 'is' where custom element extends HTMLDivElement vs. HTMLElement
+```
+const myDiv = createElement({
+  tagName:'div',
+  attributes: {
+    is:'my-modal',
+    class:'modal large primary',
+    show: true
+  }
+ });
+ // <div show="true" class="modal large primary"></div>
+```
+
+Example: custom element with typescript support
+```
+import {MyModal} from './myModal.js'
+const myDiv = createElement<MyModal>({
+  tagName:'div',
+  attributes: {
+    is:'my-modal',
+    class:'modal large primary',
+    show: true
+  }
+ });
+ // <div show="true" class="modal large primary"></div>
+ console.info(myDiv.show) // does not throw typescript error.
+```
+
+Example: properties -similar to props but do not get bound as attributes like in other frameworks. 
+Custom element inherits HTMLElement - no 'is' syntax required.
+Custom element has a property of user.
+```
+import {UserDetails} from './userDetails.js'
+const userDetails = createElement<UserDetails>({
+  tagName:'user-details',
+  properties:{
+    user: {
+      firstName: 'Jane',
+      lastName: 'Doe'
+    }
+  }
+ });
+
+ console.info(myDiv.show) // does not throw typescript error.
+```
+
+Example: defineProperties 
+[see MDN for details](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties)
+
+```
+import {UserDetails} from './userDetails.js'
+const userDetails = createElement<UserDetails>({
+  tagName:'user-details',
+  defineProperties:{
+    user: {
+      firstName: 'Jane',
+      lastName: 'Doe'
+    }
+  }
+ });
+
+ console.info(myDiv.show) // does not throw typescript error.
+```
+
+
+
 ```
 // for the unsafe string, instead you should have a tagged template literal that sanitizes and returns a documnetFragment
 
