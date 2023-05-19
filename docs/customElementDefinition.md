@@ -11,8 +11,9 @@ createElement(tagName,attributes, options?)
 
 export type CED = {
  tagName:string
- attributes:object //I actully have a specialzed type, but for brevity lets go with object
- props:object
+ attributes?: object //I actully have a specialzed type, but for brevity lets go with object
+ properties?:Partial<eleType>
+ defineProperties?: PropertyDescriptorMap
  options: createElementOptions
 }
 
