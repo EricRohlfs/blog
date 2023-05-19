@@ -1,4 +1,5 @@
 # Template Literal Sanitization with Named or Tagged Template Literals 
+This article describes the high level goals and usage of an custom function 'html' that sanitizes JavaScript template literals.
 
 ## Goals
 * Secure templates (no xss or vulnerabilities)
