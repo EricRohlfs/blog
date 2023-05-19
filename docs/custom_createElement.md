@@ -49,6 +49,18 @@ const myDiv = createElement({
  // <div class="large gray"></div>
 ```
 
+Example: setting the text of an element with typescript support
+
+Allows setting any valid and 'secure' element property. innerHTML is not considered secure, so it cannot be set.
+
+```
+const myDiv = createElement<div>({
+  tagName:'div',
+  textContent: 'Hello World'
+ });
+ // <div>Hello World</div>
+```
+
 Example: basic custom element using 'is' where custom element extends HTMLDivElement vs. HTMLElement
 ```
 const myDiv = createElement({
