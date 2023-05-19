@@ -99,11 +99,13 @@ const userDetails = createElement<UserDetails>({
   properties:{
     user: {
       firstName: 'Jane',
-      lastName: 'Doe'
+      lastName: 'Doe',
+      'user-id': '12345'
     }
   }
  });
 
+ console.info(myDiv.user.userId) // user-id becomes userId
  console.info(myDiv.user.firstName) // returns 'Jane'
 ```
 
