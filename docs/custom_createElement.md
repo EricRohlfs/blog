@@ -97,6 +97,7 @@ const userDetails = createElement<UserDetails>({
 
 Example: defineProperties 
 [see MDN for details](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties)
+
 Use Cases:
   * Freeze a value so it cannot be changed
   * Stash some data in an element that is not part of the formal definition and you need that data to be enumerable - rarely happens but have had to do it a few times.
