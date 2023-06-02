@@ -4,7 +4,7 @@
 Adding data to components in a secure manner is the primary goal of this pattern.
 The ideal place to add data to a component is after the constructor and before the connectedCallback.
 
-### Runtime view of extended lifecycle 
+### Holistic runtime view of extended lifecycle 
 * parent uses custom function 'createElement' to kick things off 
 * component constructor runs and finishes
 * data added to the component (via createElement properties or attributes)
