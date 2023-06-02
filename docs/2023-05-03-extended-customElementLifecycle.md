@@ -12,7 +12,8 @@ The ideal place to add data to a component is after the constructor and before t
   * extended lifecycle
     * pre-template-lit 
     * pre-paint
-    * post-paint  
+    * post-paint
+* connected callback finished - mostly done unless data later needs to be updated by parent component
 * optional update data - if necessary see reactivity section at the end of this document.
 
 
