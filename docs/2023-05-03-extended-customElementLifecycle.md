@@ -1,6 +1,22 @@
 # Additional Custom Element Lifecycle
 (Work in progress. Want to add notes for constructor and others. Add details to Updates. Outline how component creation makes a difference: createElement vs. tag-in-template. Also map to vue or react lifecycles. )
 
+Adding data to components in a secure manner is the primary goal of this pattern.
+The ideal place to add data to a component is after the constructor and before the connectedCallback.
+
+### Runtime view of extended lifecycle 
+* parent uses custom function 'createElement' to kick things off 
+* component constructor runs and finishes
+* data added to the component (via createElement properties or attributes)
+* component connectedCallback runs when component is added to the live DOM
+  * extended lifecycle
+    * pre-template-lit 
+    * pre-paint
+    * post-paint  
+* optional update data - if necessary see reactivity section at the end of this document.
+
+
+
 #### Related Articles:
 
 * [html tagged template lit sanitizer](./html_tagged_template_literal.md)
@@ -15,23 +31,25 @@ For a recap here is the built in lifecycle for ES6 custom elements
 * disconnectedCallback
 
 ### Extended Lifecycle in connectedCallback
+Code first. Explanation after. 
 
-
-Example 1
+Example 1 - the customElement
 ```
 export class UserDetailsEle extends HTMLDivElement{
-...
+constructor(){
+  // Empty user data. Parent adds the data using createElement example below.
+  // When the component needs to fetch it's own data, that should be in the connectedCallback. Example provided later in the document.
+  this.user = {
+    firstName:'',
+    lastName:''
+   }
+}
+
 connectedCallback(){
   // pre-template-lit
-  
-  this.user = {
-    firstName:'Jane',
-    lastName:'Doe'
-   }
   const frag = this.templateLit()
   
   // pre-paint
-  
   this.abortController = new AbortController() // this needs to be in the connectedCallback, do not create in the constructor.
   this.button = frag.querySelector(':scope button')
   this.button.addEventListener('click',()=>{ // do something interesting },signal:this.abortController.signal)
@@ -60,7 +78,7 @@ loadingTemplateLit(){
 }
 ```
 
-Example 1 being used in another component
+Example 1 Parent initializing the component and adding the data.
 ```
 import {createElement} from '....somewhere'
 // see my blog on my custom createElement function //todo: put a link here
