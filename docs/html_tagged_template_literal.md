@@ -13,7 +13,7 @@ The 'html' and ['createElement'](https://ericrohlfs.github.io/blog/custom_create
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 
 Breakdown of the 'html' in templateLit()
-```
+``` javascript
   export class myComponent extends HTMLElement {
     
     connectedCallback(){
@@ -71,7 +71,7 @@ This hasn't been an issue for me. I have several work arounds. Either a separate
 ``` html`<div><child-component></child-component></div> ```
 
 ### Workaround as separate template literal and append where needed before painting to the DOM
-```
+``` javascript
   const frag = this.templateLit()
   const childLocation = frag.querySelectort('something')
   // treat is just like the parent and append it where it is needed.
