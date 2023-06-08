@@ -35,7 +35,7 @@ For a recap here is the built in lifecycle for ES6 custom elements
 Code first. Explanation after. 
 
 Example 1 - the customElement
-```
+``` javascript
 export class UserDetailsEle extends HTMLDivElement{
 constructor(){
   // Empty user data. Parent adds the data using createElement example below.
@@ -80,7 +80,7 @@ loadingTemplateLit(){
 ```
 
 Example 1 Parent initializing the component and adding the data.
-```
+``` javascript
 import {createElement} from '....somewhere'
 // see my blog on my custom createElement function //todo: put a link here
  const userDetails = createElement({
@@ -117,7 +117,7 @@ The template is now a document fragment. Before painting, attach events and do a
 I can't think of anything that would go here. This is more conceptual, other components might interact with the component post paint via using mutation observers or maybe thrown events. Note: I have not had the issue of other components interacting with my components too early using this approach. I do NOT recommend throwing an event like 'is-painted'. If everything is setup before paint, throwing events is just extra work. This is not to say never throw events. Just I've never needed an event thrown to tell me the item was painted on the page.  I have a mutation observer that can do this so in the off chance I would need to know if an component was added to the DOM, it is the concern of the component that cares and I don't need to bake extra work into each component.
 
 Example 2 - multiple lifecycles in the connectedCallback
-```
+``` javascript
 ...
 
 connectedCallback(){
@@ -174,7 +174,7 @@ Note on modifying an attribute: The value of the attribute route is low. Chances
 
 (Technically not reactivity or 'data driven reactivity', but achieves the same goal, making changes to the DOM. In a true reactive system we would change the data and the UI would update.)
 
-```
+``` javascript
 
 connectedCallback(){ 
  ... 
@@ -213,7 +213,7 @@ userDetailsLit(){
 ```
 
 Reactive component being used
-```
+``` javascript
 import {createElement} from '....somewhere'
 // see my blog on my custom createElement function //todo: put a link here
 const userDetails = createElement({ // same as the first usage example in this article})
