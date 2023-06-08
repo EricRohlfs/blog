@@ -45,7 +45,8 @@ constructor(){
 }
 
 connectedCallback(){
-  this.innerHTML = this.template.content.clone(true)
+  // this.innerHTML = this.template.content.clone(true) // don't use innerHTML unless you have to. 
+  this.append(sanitize(this.template.content.clone(true)))
 }
 
 ```
