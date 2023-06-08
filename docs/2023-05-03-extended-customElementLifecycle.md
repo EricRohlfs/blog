@@ -218,8 +218,8 @@ import {createElement} from '....somewhere'
 // see my blog on my custom createElement function //todo: put a link here
 const userDetails = createElement({ // same as the first usage example in this article})
 this.append(userDetails)
-// something interesting happens, maybe an event
-
+// something interesting happens, maybe an event like a click
+btnClickEventHandler(e){
    userDetails.update('Jane', 'Doe') // or this could be designed to take a user object.
-
+}
 ```
