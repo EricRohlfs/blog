@@ -24,10 +24,11 @@ HTMLTemplateElement and Template Literals are not the same thing. For more see [
 
 I recently reviewed some code that used template literals, but did not have any variables. 
 Data was filled in after the component was rendered to the DOM. 
-This approach 
+This approach does not align to the design values listed above in the following ways.
 
 * did not improve readablity 
 * had more paints to the live DOM than was necessary 
 * required 'extra' coordination with the 'calling' parent component via events, which resulted in quite a bit more boiler plate code between components.
+
 
 
