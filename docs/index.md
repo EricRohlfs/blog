@@ -1,5 +1,17 @@
 ## Eric Rohlfs customElements blog
 
+
+### Pinned
+[Extended Component Lifecycle](2023-05-03-extended-customElementLifecycle.md)
+
+[Template Literal Sanitization](html_tagged_template_literal.md)
+
+[Improving createElement](custom_createElement.md)
+
+### List
+
+[Component Developer Design Values](Create 2023-06-08-component-design-values.md)
+
 [Extended Component Lifecycle](2023-05-03-extended-customElementLifecycle.md)
 
 [Template Literal Sanitization](html_tagged_template_literal.md)
