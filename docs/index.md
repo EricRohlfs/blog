@@ -10,7 +10,7 @@
 
 ### List
 
-[Component Developer Design Values](Create 2023-06-08-component-design-values.md)
+[Component Developer Design Values](2023-06-08-component-design-values.md)
 
 [Extended Component Lifecycle](2023-05-03-extended-customElementLifecycle.md)
 
