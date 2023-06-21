@@ -8,7 +8,9 @@
 
 [Improving createElement](custom_createElement.md)
 
-### List
+### List (newest posts on top)
+
+[slots and textContent](https://github.com/EricRohlfs/blog/blob/main/docs/2023-06-21-slots-and-textcontent.md)
 
 [Component Developer Design Values](2023-06-08-component-design-values.md)
 
