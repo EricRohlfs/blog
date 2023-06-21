@@ -17,6 +17,7 @@ I have not explored this in detail. Unsure if this works with named slots.
     }
     connectedCallback(){
       // helloWorld with display within the slot
+      // notice lack of a template or cloning the content. Just adding the slot element works.
       const frag = html`<div class='wrap'><button><slot></slot></button></div>`
       this.shadowroot.append(frag);
     }
