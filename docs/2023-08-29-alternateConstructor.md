@@ -62,9 +62,7 @@ export const createHelloWorld(msg){
 
 Back to the constructor with argumnets example, we colud handle one of the other issues with components, what is required and what is optional.
 
-Communicating required and optional arguments is not trivial in customElements. There are a few specs that try to generate metadata to help. But that requires the dev to look in the documents. Intellisense would be much nicer.
-
-Normally, in our msg example, the best we can do is throw an error or console msg if the msg attribute is missing. Or develop some sort of a convention like have a props property in the customElement. Neither solutions are vey good. But, Typescript with constructor arguments would be a huge improvement.
+Communicating required and optional arguments is not trivial in customElements. There are a few specs that try to generate metadata to help. Intellisense is nicer that hunting through documents.
 
 ```
 export type requiredArgs = {
