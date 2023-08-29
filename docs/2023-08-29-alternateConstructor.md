@@ -3,8 +3,7 @@
 It is generally accepted that the constructor for customElements does not have any parameters.
 This way we can initialize the component in JavaScript or as HTML.
 
-But what if we don't care about initializing the customElement in HTML. We will only do it in JS because we have 
-to pass data to it for it to work.
+But what if we don't care about initializing the customElement in HTML and only plan to initialize in JavaScript?
 
 ## No constructor arguments parameters - nothing interesting here, just setting a baseline.
 ```
