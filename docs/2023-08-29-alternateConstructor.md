@@ -1,4 +1,4 @@
-# Alternate Constructor Pattern for customElements
+# Using Constructor Arguments in customElements
 
 It is generally accepted that customElement constructors do not accept parameters.
 This makes since since HTML is a markupg language and not a programming language. HTML does not have a concept of a constructor. So we have hit a wall and we don't use arguments in constructors, but we can and there are benefits to the approach. The primarny benefit is it feels more natural in JavaScript. The whole idea of the constructor is to gather the dependencies needed to do work. Passing data or static config data via the constructor makes sense. 
