@@ -25,7 +25,7 @@ customElements.define('hello-world',HelloWorld)
 
 // example usage in JavaScript
 const hello = new HelloWorld()
-document.append(hello)
+document.body.append(hello)
 
 // example usage in the html
 <body> <hello-world msg="Hello World"></hello-world>
@@ -41,7 +41,7 @@ export class HelloWorld extends HTMLElement{
 }
 // Yes! this will work
 const hello = new HelloWorld('Hello Universe')
-document.append(hello)
+document.body.append(hello)
 
 // in html this will not work
 ```
@@ -90,9 +90,44 @@ export class HelloWorld extends HTMLElement {
 const required = { msg: 'Hello World' }
 const optional = { color: 'green' }
 const hello = new HelloWorld(required, optional)
-document.append(hello)
+document.body.append(hello)
 
 ```
 
 I exaggerated having two arguments in this example. In a real component, with typescript, I would have one argument and let typescript manage the required and optional arguments. 
+
+## Real World Usage Note
+In the examples above, I simply appended the component to the document body.
+
+In a component architure, I would have a placeholder element, usually a div, that would be queried and appended to.
+
+```
+// Host component that will use hello-world.
+
+export class MyHostComponent extends HTMLElement{
+
+  connectedCallback(){
+    // black magic in my html function described in another post but returns document fragment from a template literal
+    const frag = html`<div><h1>Welcome</h1> <div placeholder-hello-world></div></div>
+    const helloWorldPlaceholder = frag.querySelector(':scope div[placeholder-hello-world])
+    const helloWorld = new HelloWorld({msg:'Hello World'})
+    helloWorldPlaceholder.append(helloWorld)
+    
+  }
+
+}
+
+```
+### Note on querySelector strategy: 
+Attributes: I'm using a boolean attribute. Querying attributes is slower, BUT in this example it won't make a difference. Why? We are not querying the whole DOM and we have a very shallow tree. If this component was a top level component with a deep tree underneath, then I would use classes.
+
+Classes: Classes are faster, but if using a framework like tailwind where there might be 20 class attributes, that can be hard to read and manage.
+
+ID's: If I knew there would only ever be one hello-world-placeholder one on the page, then I might use id if I needed to increase performance and was having a readability issue with too many classes. Otherwise, I would not recommend using an id. As per the spec, id's are supposed to be unique to the document.
+
+## Other Interesting Facts  
+
+In this approach, you will have to new up the component like you would any other class. document.createElement(tagname, options) will not work.
+
+You still need to define the element in the custom element registry. customElements.define(tagname,implementation, options)
  
