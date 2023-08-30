@@ -13,7 +13,7 @@ My Question to ChatGPT
 ```
 create ES6 customElement for input element with autocomplete
 ```
-
+Update: use this.list.replaceChildren() instead of this.list.innerHTML = ''.
 ```
 // unedited output from chatGPT 2023-01-23
 
