@@ -5,6 +5,11 @@ This way we can initialize the component in JavaScript or as HTML.
 
 But what if we don't care about initializing the customElement in HTML and only plan to initialize in JavaScript?
 
+Decision Tree: 
+1. Do you need to use JavaScript to set data or attributes or other to create or modify the component?
+1A. Yes: Then this is a valid option.
+1B. No: Then your mileage may varry depending on what you are planning to do with your component.
+
 ## No constructor arguments parameters - nothing interesting here, just setting a baseline.
 ```
 export class HelloWorld extends HTMLElement {
