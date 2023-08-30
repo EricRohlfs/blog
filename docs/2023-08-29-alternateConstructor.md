@@ -7,7 +7,9 @@ Note: I am not talking about reactivity. Reactivity defined as; if the data chan
 
 Decision Tree: 
 1. Do you need to use JavaScript to set data or attributes to create the component?
+
 1A. Yes: Then this is a valid option.
+
 1B. No: Then your mileage may varry depending on what you are planning to do with your component.
 
 ## No constructor arguments parameters - nothing interesting here, just setting a baseline.
