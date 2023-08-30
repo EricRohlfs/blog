@@ -1,7 +1,7 @@
 # Using Constructor Arguments in customElements
 
 It is generally accepted that customElement constructors do not accept parameters.
-This makes since since HTML is a markupg language and not a programming language. HTML does not have a concept of a constructor. So we have hit a wall and we don't use arguments in constructors, but we can and there are benefits to the approach. The primarny benefit is it feels more natural in JavaScript. The whole idea of the constructor is to gather the dependencies needed to do work. Passing data or static config data via the constructor makes sense. 
+This makes since since HTML is a markupg language and not a programming language. HTML does not have a concept of a constructor. This is the main reason why we don't use constructor arguments. But, nothing says we can't. There are benefits to the approach. The primarny benefit is it feels more natural in JavaScript. The whole idea of the constructor is to gather the dependencies needed to do work. Passing data via the constructor makes sense and can help with other issues like what is required for the component to work, or order of operations.  
 
 Note: I am not talking about reactivity. Reactivity defined as; if the data changes after the component is materialized or rendered, the change is reflected in the rendered html.
 
