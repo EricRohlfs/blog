@@ -1,12 +1,12 @@
 # Alternate Constructor Pattern for customElements
 
-It is generally accepted that the constructor for customElements does not have any parameters.
-This way we can initialize the component in JavaScript or as HTML.
+It is generally accepted that customElement constructors do not accept parameters.
+This makes since since HTML is a markupg language and not a programming language. HTML does not have a concept of a constructor. So we have hit a wall and we don't use arguments in constructors, but we can and there are benefits to the approach. The primarny benefit is it feels more natural in JavaScript. The whole idea of the constructor is to gather the dependencies needed to do work. Passing data or static config data via the constructor makes sense. 
 
-But what if we don't care about initializing the customElement in HTML and only plan to initialize in JavaScript?
+Note: I am not talking about reactivity. Reactivity defined as; if the data changes after the component is materialized or rendered, the change is reflected in the rendered html.
 
 Decision Tree: 
-1. Do you need to use JavaScript to set data or attributes or other to create or modify the component?
+1. Do you need to use JavaScript to set data or attributes to create the component?
 1A. Yes: Then this is a valid option.
 1B. No: Then your mileage may varry depending on what you are planning to do with your component.
 
@@ -17,6 +17,7 @@ export class HelloWorld extends HTMLElement {
   constructor(){
     super();
   }
+  
   connectedCallback(){
     this.textContent = this.getAttribute('msg')
   }
