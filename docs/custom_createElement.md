@@ -23,6 +23,7 @@ For this to work, after the element is created, we obviously do not want to add 
 * automatically add the is attribute to the element 
 * automatically call the correct constructor when using the is attribute
 * a way to have flags to turn the features on or off
+* Can pass an argumnet into the constructor under certain conditions.
 
 I've tried several methods and the cleanest is to pass in on object, having argumnets get too weird given all the potential flags
 
@@ -180,4 +181,29 @@ import {html} from 'my-project-essentials'; // you will have to make your own. I
 const userSuppliedInput = html`<span>${somethingUnsafe}</span>`
 myDiv.appendChild(userSuppliedInput);
 
+```
+
+## Update calling a constructor. This has limitations, but it useful.
+Update 2023-09-06 - I have recently updated my createElement to also support a calling a constructor with one argument. I'll post more info later but the quick is 
+
+```
+// Notice the constructor accepts an argument. This works as long as you plan to only create the element is JavaScript.
+// Normaly custom elements do not accept argumnets in the constructor. But it can be done. Can be a nice alternative to the more traditional methods when passing around complex objects/props/properties. 
+class HelloMsg extends HTMLElement{
+  constructor(arg){
+    super()
+    this.msg = arg.msg
+  }
+  connectedCallback(){
+    this.textContent = this.msg
+  }
+}
+customElements.define('hello-msg', HelloMsg)
+
+const myEle = createElement({
+  ctor: HelloMsg,
+  ctorArg: { msg:'Hello World'}
+})
+
+document.body.append(myEle)
 ```
