@@ -2,6 +2,8 @@
 
 Custom Element support is possible now that Internet Explorer is officially end of life.
 
+This article shows the basic syntax to get started with custom elements.
+
 ## Hello World Example
 ```
 // helloWorld.js
