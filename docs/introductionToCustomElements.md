@@ -1,6 +1,6 @@
 # Introduction to Custom Elements
 
-Custom Element support is possible now that Internet Explorer is dead.
+Custom Element support is possible now that Internet Explorer is officially end of life.
 
 ## Hello World Example
 ```
