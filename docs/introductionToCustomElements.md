@@ -43,7 +43,7 @@ class HelloWorld extends HTMLElement{
 4. Associate a new tag name to the class so the browser knows what to do. Skipping this step will throw an error.
 customElements.define('hello-world', HelloWorld)
 
-5. import the component into the page. type="module" is important.
+5. Import the component into the page. type="module" is important.
 // index.html
 <html>
   <head>
