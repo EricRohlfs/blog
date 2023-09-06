@@ -25,6 +25,9 @@ customElements.define('hello-world', HelloWorld)
      <hello-world></hello-world>
   </body>
 </html>
+
+// In the browser, should see 'Hello World'
+
 ```
 
 ## Hello World Explained
