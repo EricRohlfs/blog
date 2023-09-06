@@ -80,17 +80,27 @@ class HelloWorld extends HTMLElement{
   }
 }
 
-<input type="text"/>
-<hello-world></hello-world>
-
-<script>
-  // Behavior, the message should update as the user types in the text box.
-  const input = document.querySelector('input')
-  const helloWorldEle = document.querySelector('hello-world')
-  input.addEventListener('input',()=>{
-    helloWorldEle.setAttribute('msg', input.value
-  }
-</script>
+// index.html
+<html>
+  <head>
+    <script type="module">
+      import './helloWorld.js'
+    </script>
+  </head>
+  <body>
+     
+    <input type="text"/>
+    <hello-world></hello-world>
+    <script>
+      // Behavior: The message should update as the user types in the text box.
+      const input = document.querySelector('input')
+      const helloWorldEle = document.querySelector('hello-world')
+      input.addEventListener('input',()=>{
+        helloWorldEle.setAttribute('msg', input.value
+      }
+    </script>
+  </body>
+</html>
 
 ```
 
