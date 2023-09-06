@@ -96,7 +96,7 @@ class HelloWorld extends HTMLElement{
       const input = document.querySelector('input')
       const helloWorldEle = document.querySelector('hello-world')
       input.addEventListener('input',()=>{
-        helloWorldEle.setAttribute('msg', input.value)
+        helloWorldEle.setAttribute('msg', input.value )
       }
     </script>
   </body>
