@@ -90,7 +90,7 @@ class HelloWorld extends HTMLElement{
   <body>
      
     <input type="text"/>
-    <hello-world></hello-world>
+    <hello-world msg=""></hello-world>
     <script>
       // Behavior: The message should update as the user types in the text box.
       const input = document.querySelector('input')
