@@ -1,5 +1,6 @@
 ## Eric Rohlfs customElements blog
 
+[Introduction to Custom Elements](introductionToCustomElements.md)
 
 ### Pinned
 [Extended Component Lifecycle](2023-05-03-extended-customElementLifecycle.md)
