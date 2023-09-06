@@ -58,7 +58,7 @@ customElements.define('hello-world', HelloWorld)
 ```
 
 
-## Builtin Very Basic Reactivity 
+## Built-in Very Basic Reactivity 
 
 Don't get too excited here. This is a good place to start, but most of the time you will use more complex reactivity strategies.
 
