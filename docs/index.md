@@ -10,6 +10,8 @@
 [Improving createElement](custom_createElement.md)
 
 ### List (newest posts on top)
+[Do not use show/hide](2023-09-12-do-not-show-hide.md)
+
 [customElements and constructor arguments](2023-08-29-alternateConstructor.md)
 
 [slots and textContent](https://github.com/EricRohlfs/blog/blob/main/docs/2023-06-21-slots-and-textcontent.md)
