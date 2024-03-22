@@ -63,7 +63,7 @@ customElements.define('hello-world', HelloWorld)
 ```
 
 ## Reactivity
-The easiest form or reactivity is to just re-render the component. This is very performant. If you would like a library to help with a standard workflow and reactivity
+The easiest form of reactivity is to just re-render the component. This is much faster that most people expect. If you would like a library to help with following an htmx like workflow, checkout TimberFrameJs 
 https://github.com/timberframejs/timberframejs
 
 
