@@ -62,6 +62,10 @@ customElements.define('hello-world', HelloWorld)
 </html>
 ```
 
+## Reactivity
+The easiest form or reactivity is to just re-render the component. This is very performant. If you would like a library to help with a standard workflow and reactivity
+https://github.com/timberframejs/timberframejs
+
 
 ## Built-in Very Basic Reactivity 
 
