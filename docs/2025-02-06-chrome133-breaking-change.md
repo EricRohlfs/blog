@@ -1,6 +1,6 @@
 # Chrome 133 has breaking change when using :scope in a querySelector where the context is a document fragment
 
-In Chrome 133, querySelector against a document fragment with :scope selector breaks the query.
+In Chrome 133, querySelector against a document fragment with :scope selector returns null, where it used to return the element that matched the query.
 
 Removing the :scope selector fixes the issue, but all the applications in production using this selector have to be redeployed.
 
