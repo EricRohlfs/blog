@@ -70,6 +70,8 @@
 
 [Changing my mind on the is attribute](changing-my-mind-on-is.md)
 
+[Chrome 133 bug with :scope on documentFragment querySelector](2025-02-06-chrome133-breaking-change.md)
+
 [Changing my mind on the template tag](template-tag-vs-template-literals.md)
 
 [vue hijacking my template and a workaround](custom-elements-template-and-vue.md)
