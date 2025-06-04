@@ -24,9 +24,9 @@ For passing HTML from a parent component to a child component, use templates and
 
 For passing JSON or JavaScript objects to components...
 
-- pass via the constructor (yes you can do that, just like in regular programming.)
-- pass via a function, or functions.
-- Attributes are ok for primitive data types, and have their place, but if you are already in JS just call a function.
+- pass via the constructor ``` const myEle = new MyEle(users) ``` (yes you can do that, just like in regular programming.)
+- pass via a function, or functions. ``` myele.addUser(userInfo)
+- Attributes are ok for primitive data types, and have their place, but if you are already in JS just call a function. ``` <my-ele userid="12345"
 
  ## Shadow Dom
 
