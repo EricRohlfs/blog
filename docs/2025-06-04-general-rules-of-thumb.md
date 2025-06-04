@@ -54,7 +54,7 @@ https://github.com/timberframejs/timberframejs/blob/main/src/utils/taggedTemplat
 
 ## Custom Element Types
 
-Inherity from built-in elements when possible to avoid making a bunch of pass through functions and attributes.
+Inherit from built-in elements when possible to avoid making a bunch of pass through functions and attributes.
 
 The syntax is different for the two, and built-ins do not support shadow-dom.
 
@@ -62,7 +62,6 @@ There are two types of custom elements.
 
 1. Those that inherit from HTMLElement.
 2. Built-in's Those that inherit from a specific element like HTMLDialogElement, or HTMLFormElement.
-
 
 
  
